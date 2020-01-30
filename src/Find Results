@@ -1,0 +1,2678 @@
+Searching 125 files for "jaccard"
+
+<untitled 28>:
+    1  -> cosine similarity
+    2: from scipy.spatial.distance import pdist, cosine, jaccard
+
+1 match in 1 file
+
+
+Searching 125 files for "pdist"
+
+<untitled 28>:
+    1  -> cosine similarity
+    2: from scipy.spatial.distance import pdist, cosine, jaccard
+
+1 match in 1 file
+
+
+Searching 125 files for "cosine"
+
+<untitled 28>:
+    1: -> cosine similarity
+    2: from scipy.spatial.distance import pdist, cosine, jaccard
+
+2 matches in 1 file
+
+
+Searching 123 files for "cosine"
+
+0 matches
+
+Searching 124 files for "pyspark"
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/aws_stuff.py:
+   62  
+   63  
+   64: %spark.pyspark
+   65  import boto3
+   66  import boto3.session
+   ..
+   78  
+   79  # This one works in Qubole
+   80: %spark.pyspark
+   81  import boto3
+   82  sess = boto3.Session(region_name='eu-central-1')
+   ..
+   88  
+   89  # S3 Object (bucket_name and key are identifiers)
+   90: %spark.pyspark
+   91  import boto3
+   92  sess = boto3.Session(region_name='eu-central-1')
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/mlLib_example_collaborative_filtering.py:
+    1: from pyspark.ml.evaluation import RegressionEvaluator
+    2: from pyspark.ml.recommendation import ALS
+    3: from pyspark.sql import Row
+    4  
+    5  lines = spark.read.text("data/mllib/als/sample_movielens_ratings.txt").rdd
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pyspark.py:
+    1  import os
+    2  # -     -       -       -       -
+    3: #   Initialise PySpark
+    4  # -     -       -       -       -
+    5: from pyspark import SparkContext
+    6: from pyspark.sql import SparkSession, SQLContext
+    7  
+    8  spark = SparkSession \
+    .
+   60  
+   61  # -     -       -       -       -
+   62: #   Initialise PySpark
+   63  # -     -       -       -       -
+   64  
+   65: # PySpark
+   66: from pyspark import SparkContext
+   67: from pyspark.sql import SparkSession, SQLContext
+   68: from pyspark.sql.utils import require_minimum_pandas_version, require_minimum_pyarrow_version
+   69: import pyspark.sql.functions as psf
+   70: from pyspark.sql.functions import col, asc
+   71  
+   72  spark = SparkSession \
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_connectivity_DB.py:
+   86  # Get a the contents of an S3 bucket using resources (high-level) instead of client (low-level)
+   87  # S3 Object (bucket_name and key are identifiers)
+   88: %spark.pyspark
+   89  import boto3
+   90  sess = boto3.Session(region_name='eu-central-1')
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_parquet.py:
+    2  
+    3  From PARQUET to PANDAS
+    4: https://spark.apache.org/docs/latest/sql-programming-guide.html#pyspark-usage-guide-for-pandas-with-apache-arrow
+    5  
+    6  Notes:
+    .
+   47  
+   48  
+   49: PySpark tips:
+   50  - SparkContext tells Spark how and where to access a cluster. 
+   51  - Explode: Returns a new row for each element in the given array or map.
+   52: - Available functions: http://spark.apache.org/docs/2.1.0/api/python/pyspark.sql.html#module-pyspark.sql.functions
+   53  - Use withColumn to add a new variable to the dataframe
+   54: - Operation on Pyspark DataFrame run parallel on different nodes in cluster but, in case of pandas it is not possible.
+   55: - Complex operations in pandas are easier to perform than Pyspark DataFrame
+   56  
+   57  
+   ..
+   63  import utils.carlosUtils as cu
+   64  import pyarrow.parquet as pq
+   65: from pyspark.sql import SparkSession
+   66: from pyspark.sql.utils import require_minimum_pandas_version, require_minimum_pyarrow_version
+   67  
+   68  require_minimum_pandas_version()
+   ..
+  152  
+  153  # -     -       -       -       -       -
+  154: # (i) Tests through PySpark
+  155  # -     -       -       -       -       -
+  156  spark = SparkSession \
+  ...
+  173  
+  174  # Kaizen Day (23/04/2018)
+  175: # >>> Use PySpark to read the parquet files
+  176  import pandas as pd
+  177  import numpy as np
+  178  import os
+  179  import utils.carlosUtils as cu
+  180: from pyspark.sql import SQLContext
+  181: from pyspark import SparkContext
+  182: from pyspark.sql.functions import col, asc
+  183  sc = SparkContext(appName="PythonTester")
+  184  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/spark_related.py:
+    1: - Recommends to use Dask instead of PySpark to avoid the overhead.
+    2  - Scale Pandas through Spark: https://github.com/sparklingpandas/sparklingpandas
+    3  http://sparklingpandas.com/
+
+31 matches across 6 files
+
+
+Searching 124 files for "pyspark"
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/aws_stuff.py:
+   62  
+   63  
+   64: %spark.pyspark
+   65  import boto3
+   66  import boto3.session
+   ..
+   78  
+   79  # This one works in Qubole
+   80: %spark.pyspark
+   81  import boto3
+   82  sess = boto3.Session(region_name='eu-central-1')
+   ..
+   88  
+   89  # S3 Object (bucket_name and key are identifiers)
+   90: %spark.pyspark
+   91  import boto3
+   92  sess = boto3.Session(region_name='eu-central-1')
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/mlLib_example_collaborative_filtering.py:
+    1: from pyspark.ml.evaluation import RegressionEvaluator
+    2: from pyspark.ml.recommendation import ALS
+    3: from pyspark.sql import Row
+    4  
+    5  lines = spark.read.text("data/mllib/als/sample_movielens_ratings.txt").rdd
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pyspark.py:
+    1  import os
+    2  # -     -       -       -       -
+    3: #   Initialise PySpark
+    4  # -     -       -       -       -
+    5: from pyspark import SparkContext
+    6: from pyspark.sql import SparkSession, SQLContext
+    7  
+    8  spark = SparkSession \
+    .
+   60  
+   61  # -     -       -       -       -
+   62: #   Initialise PySpark
+   63  # -     -       -       -       -
+   64  
+   65: # PySpark
+   66: from pyspark import SparkContext
+   67: from pyspark.sql import SparkSession, SQLContext
+   68: from pyspark.sql.utils import require_minimum_pandas_version, require_minimum_pyarrow_version
+   69: import pyspark.sql.functions as psf
+   70: from pyspark.sql.functions import col, asc
+   71  
+   72  spark = SparkSession \
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_connectivity_DB.py:
+   86  # Get a the contents of an S3 bucket using resources (high-level) instead of client (low-level)
+   87  # S3 Object (bucket_name and key are identifiers)
+   88: %spark.pyspark
+   89  import boto3
+   90  sess = boto3.Session(region_name='eu-central-1')
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_parquet.py:
+    2  
+    3  From PARQUET to PANDAS
+    4: https://spark.apache.org/docs/latest/sql-programming-guide.html#pyspark-usage-guide-for-pandas-with-apache-arrow
+    5  
+    6  Notes:
+    .
+   47  
+   48  
+   49: PySpark tips:
+   50  - SparkContext tells Spark how and where to access a cluster. 
+   51  - Explode: Returns a new row for each element in the given array or map.
+   52: - Available functions: http://spark.apache.org/docs/2.1.0/api/python/pyspark.sql.html#module-pyspark.sql.functions
+   53  - Use withColumn to add a new variable to the dataframe
+   54: - Operation on Pyspark DataFrame run parallel on different nodes in cluster but, in case of pandas it is not possible.
+   55: - Complex operations in pandas are easier to perform than Pyspark DataFrame
+   56  
+   57  
+   ..
+   63  import utils.carlosUtils as cu
+   64  import pyarrow.parquet as pq
+   65: from pyspark.sql import SparkSession
+   66: from pyspark.sql.utils import require_minimum_pandas_version, require_minimum_pyarrow_version
+   67  
+   68  require_minimum_pandas_version()
+   ..
+  152  
+  153  # -     -       -       -       -       -
+  154: # (i) Tests through PySpark
+  155  # -     -       -       -       -       -
+  156  spark = SparkSession \
+  ...
+  173  
+  174  # Kaizen Day (23/04/2018)
+  175: # >>> Use PySpark to read the parquet files
+  176  import pandas as pd
+  177  import numpy as np
+  178  import os
+  179  import utils.carlosUtils as cu
+  180: from pyspark.sql import SQLContext
+  181: from pyspark import SparkContext
+  182: from pyspark.sql.functions import col, asc
+  183  sc = SparkContext(appName="PythonTester")
+  184  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/spark_related.py:
+    1: - Recommends to use Dask instead of PySpark to avoid the overhead.
+    2  - Scale Pandas through Spark: https://github.com/sparklingpandas/sparklingpandas
+    3  http://sparklingpandas.com/
+
+31 matches across 6 files
+
+
+Searching 124 files for "SPARK_HOME"
+
+0 matches
+
+Searching 261 files for "SPARK_HOME"
+
+0 matches
+
+Searching 124 files for "max"
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/aws_stuff.py:
+  122      continuation_token = None
+  123      while True:
+  124:         list_kwargs = dict(MaxKeys=1000, **base_kwargs)
+  125          if continuation_token:
+  126              list_kwargs['ContinuationToken'] = continuation_token
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/DL_autoencoders.py:
+  127  from keras.models import Model
+  128  from keras.optimizers import RMSprop
+  129: from keras.layers import Input,Dense,Flatten,Dropout,merge,Reshape,Conv2D,MaxPooling2D,UpSampling2D,Conv2DTranspose
+  130  from keras.layers.normalization import BatchNormalization
+  131  from keras.models import Model,Sequential
+  ...
+  137  '''
+  138  from keras.layers.normalization import BatchNormalization
+  139: from keras.layers import Input,Dense,Flatten,Dropout,merge,Reshape,Conv2D,MaxPooling2D,UpSampling2D,Conv2DTranspose
+  140  
+  141  num_classes = 10
+  ...
+  148      conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(conv1)
+  149      conv1 = BatchNormalization()(conv1)
+  150:     pool1 = MaxPooling2D(pool_size=(2, 2))(conv1) #14 x 14 x 32
+  151      conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(pool1) #14 x 14 x 64
+  152      conv2 = BatchNormalization()(conv2)
+  153      conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(conv2)
+  154      conv2 = BatchNormalization()(conv2)
+  155:     pool2 = MaxPooling2D(pool_size=(2, 2))(conv2) #7 x 7 x 64
+  156      conv3 = Conv2D(128, (3, 3), activation='relu', padding='same')(pool2) #7 x 7 x 128 (small and thick)
+  157      conv3 = BatchNormalization()(conv3)
+  ...
+  167      flat = Flatten()(enco)
+  168      den = Dense(128, activation='relu')(flat)
+  169:     out = Dense(num_classes, activation='softmax')(den)
+  170      return out
+  171  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/DL_autoencoders_TF2.0.py:
+  127  from keras.models import Model
+  128  from keras.optimizers import RMSprop
+  129: from keras.layers import Input,Dense,Flatten,Dropout,merge,Reshape,Conv2D,MaxPooling2D,UpSampling2D,Conv2DTranspose
+  130  from keras.layers.normalization import BatchNormalization
+  131  from keras.models import Model,Sequential
+  ...
+  137  '''
+  138  from keras.layers.normalization import BatchNormalization
+  139: from keras.layers import Input,Dense,Flatten,Dropout,merge,Reshape,Conv2D,MaxPooling2D,UpSampling2D,Conv2DTranspose
+  140  
+  141  num_classes = 10
+  ...
+  148      conv1 = Conv2D(32, (3, 3), activation='relu', padding='same')(conv1)
+  149      conv1 = BatchNormalization()(conv1)
+  150:     pool1 = MaxPooling2D(pool_size=(2, 2))(conv1) #14 x 14 x 32
+  151      conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(pool1) #14 x 14 x 64
+  152      conv2 = BatchNormalization()(conv2)
+  153      conv2 = Conv2D(64, (3, 3), activation='relu', padding='same')(conv2)
+  154      conv2 = BatchNormalization()(conv2)
+  155:     pool2 = MaxPooling2D(pool_size=(2, 2))(conv2) #7 x 7 x 64
+  156      conv3 = Conv2D(128, (3, 3), activation='relu', padding='same')(pool2) #7 x 7 x 128 (small and thick)
+  157      conv3 = BatchNormalization()(conv3)
+  ...
+  167      flat = Flatten()(enco)
+  168      den = Dense(128, activation='relu')(flat)
+  169:     out = Dense(num_classes, activation='softmax')(den)
+  170      return out
+  171  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/DL_TF2.0_autoencoders_tutorial.py:
+   20  
+   21  (training_features, _), _ = tf.keras.datasets.mnist.load_data()
+   22: training_features = training_features / np.max(training_features)
+   23  training_features = training_features.reshape(training_features.shape[0],
+   24                                                training_features.shape[1] * training_features.shape[2]).astype(np.float32)
+   ..
+   81          reconstructed = tf.reshape(autoencoder(tf.constant(batch_features)), (batch_features.shape[0], 28, 28, 1))
+   82          tf.summary.scalar('loss', loss_values, step=step)
+   83:         tf.summary.image('original', original, max_outputs=10, step=step)
+   84:         tf.summary.image('reconstructed', reconstructed, max_outputs=10, step=step)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/kaggle_lightGBM.py:
+  179                'min_child_weight': [1e-5, 1e-3, 1e-2, 1e-1, 1, 1e1, 1e2, 1e3, 1e4],
+  180                'subsample': sp_uniform(loc=0.2, scale=0.8), 
+  181:               'max_depth': [-1, 1, 2, 3, 4, 5, 6, 7],
+  182                'colsample_bytree': sp_uniform(loc=0.4, scale=0.6),
+  183                'reg_alpha': [0, 1e-1, 1, 2, 5, 7, 10, 50, 100],
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/machineLearning.py:
+    1  Isolation forest distance-less regressors/classifiers available in sklearn
+    2: The IsolationForest ‘isolates’ observations by randomly selecting a feature and then randomly selecting a split value between the maximum and minimum values of the selected feature.
+    3  
+    4  
+    .
+   71  y[::5, :] += (0.5 - rng.rand(20, 2))
+   72  # Fit regression model
+   73: regr_1 = DecisionTreeRegressor(max_depth=2)
+   74  # Predict
+   75  X_test = np.arange(-100.0, 100.0, 0.01)[:, np.newaxis]
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ml_BayesianOptimisation.py:
+  101              algo = opt_algorithm,
+  102              trials = tpe_trials,
+  103:             max_evals = 2000)
+  104  
+  105  print(best)
+  ...
+  158              algo = opt_algorithm,
+  159              trials = tpe_trials_v2,
+  160:             max_evals = 2000)
+  161  
+  162  print(best_v2)
+  ...
+  229  
+  230  def black_box_function(x_1, x_2, x_3, x_4):
+  231:     """Function with unknown internals we wish to *maximize*.
+  232      """
+  233      y = 10*np.random.random(1)[0] + x_3 - x_4
+  ...
+  245  )
+  246  
+  247: optimizer.maximize(
+  248      init_points=4,
+  249      n_iter=8,
+  250  )
+  251  
+  252: print(optimizer.max)
+  253  
+  254  
+  ...
+  281              algo = opt_algorithm,
+  282              trials = tpe_trials,
+  283:             max_evals = 100)
+  284  
+  285  
+  ...
+  307      return None
+  308  
+  309: # Starting maximization (minus sign since most optimization problems are 
+  310  # formulated in terms of finding minimum)
+  311  res_M = minimize(lambda x: -black_box_function(*x), x0=xy_M[0], method='L-BFGS-B', 
+  312                     bounds=[x_limits, y_limits, x_limits, y_limits], 
+  313:                    options={'maxiter': n_pts**2}, 
+  314                     callback=f_current_point)
+  315  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ML_feature_normalisation.py:
+    1  
+    2  
+    3: from sklearn.preprocessing import MinMaxScaler
+    4: from sklearn.preprocessing import minmax_scale
+    5: from sklearn.preprocessing import MaxAbsScaler
+    6  from sklearn.preprocessing import StandardScaler
+    7  from sklearn.preprocessing import RobustScaler
+    .
+   26      ('Data after standard scaling',
+   27          StandardScaler().fit_transform(X)),
+   28:     ('Data after min-max scaling',
+   29:         MinMaxScaler().fit_transform(X)),
+   30:     ('Data after max-abs scaling',
+   31:         MaxAbsScaler().fit_transform(X)),
+   32      ('Data after robust scaling',
+   33          RobustScaler(quantile_range=(25, 75)).fit_transform(X)),
+   ..
+   67  
+   68  StandardScaler
+   69: MinMaxScaler
+   70: MaxAbsScaler
+   71  Normalizer
+   72  
+   ..
+   77  
+   78  # it does not work
+   79: prc = importlib.import_module('MinMaxScaler', package='sklearn.preprocessing')
+   80  
+   81  
+   ..
+   91  
+   92  
+   93: loader = importlib.find_loader('MinMaxScaler', pkg.__path__)
+   94  print('Loader:', loader)
+   95  
+   ..
+  102  
+  103  
+  104: from sklearn.preprocessing import MinMaxScaler
+  105  
+  106  importlib.import_module('sklearn.preprocessing')
+  ...
+  109  
+  110  from sklearn import preprocessing
+  111: exec('prc=preprocessing.MinMaxScaler()')
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ml_lightGBM.py:
+   54  
+   55  print('Plot feature importances...')
+   56: ax = lgb.plot_importance(gbm, max_num_features=10)
+   57  plt.show()
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ML_SHAP.py:
+  147  
+  148  xgb_model = xgb.XGBRegressor(n_estimators=100, learning_rate=0.08, gamma=0, subsample=0.75,
+  149:                            colsample_bytree=1, max_depth=7)
+  150  
+  151  xgb_model.fit(X,y)
+  ...
+  231  ax = sns.heatmap(
+  232      df_correlations, 
+  233:     vmin=-1, vmax=1, center=0,
+  234      cmap=cmap,
+  235      square=True
+  ...
+  259  xgb_model = xgb.XGBRegressor(n_estimators=100, learning_rate=0.08, 
+  260                               gamma=0, subsample=0.75,
+  261:                              colsample_bytree=1, max_depth=7)
+  262  
+  263  xgb_model.fit(X,y)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ML_training_several_models.py:
+   30  models.append(('RID', Ridge(random_state = 42)))
+   31  models.append(('LAR', Lasso(random_state = 42)))
+   32: models.append(('MLR', MLPRegressor(hidden_layer_sizes=(10,), max_iter=1000,random_state = 42)))
+   33  
+   34  # Evaluating each model in turn by using a R2 score. Consider any negative value as R2 = 0
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ml_XGBoost.py:
+   52  dvalid = xgb.DMatrix(X_valid, label=y_valid)
+   53  # specify parameters via map, definition are same as c++ version
+   54: param = {'n_estimators': 100, 'max_depth':2, 'eta':0.1, 'silent':0, 'objective':'binary:logistic'}
+   55  
+   56  # specify validations set to watch performance
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ML_XGBoost_internals.py:
+   48  num_nodes = np.zeros(num_trees, dtype=np.int32)
+   49  num_deleted = np.zeros(num_trees, dtype=np.int32)
+   50: max_depth = np.zeros(num_trees, dtype=np.int32)
+   51  num_feature = np.zeros(num_trees, dtype=np.int32)
+   52  size_leaf_vector = np.zeros(num_trees, dtype=np.int32)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/mlLib_example_collaborative_filtering.py:
+   39  # Build the recommendation model using ALS on the training data
+   40  # Note we set cold start strategy to 'drop' to ensure we don't get NaN evaluation metrics
+   41: als = ALS(maxIter=5, regParam=0.01, userCol="userId", itemCol="movieId", ratingCol="rating",
+   42            coldStartStrategy="drop")
+   43  model = als.fit(training)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/optimisation_PULP.py:
+   94  
+   95  # Create the 'prob' variable to contain the problem data
+   96: prob = pulp.LpProblem("Simple Stores Problem", pulp.LpMaximize)
+   97  #prob += product_cost-pulp.lpSum([replenisment_cost[i]*stores_chosen[i] for i in store_list]), "Objective"
+   98  # Break down into two lpSums: the profit and the costs
+   ..
+  151  
+  152  
+  153: Max_Per_Elem = {'Iron': 35, 
+  154           'Mercury': 17, 
+  155           'Silver': 28
+  ...
+  176  
+  177  # Create the 'prob' variable to contain the problem data
+  178: prob = LpProblem("Elements Concentration Problem", LpMaximize)
+  179  
+  180  # The objective function
+  181: prob += lpSum([conc_vars[i] for i in concs]), "Total Utilization is maximized"
+  182  
+  183  for elem in ELEMENTS:
+  184:     prob += lpSum([CONCENTRATE_DIC[elem][i]/Max_Per_Elem[elem] * conc_vars[i] for i in concs]) <= Max_Per_Elem[elem]/100, elem+"Percent"
+  185  
+  186  prob.writeLP("ElemUtiliztionModel.lp")
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas.py:
+  167  
+  168  Homemade aggregations (get stats for a column):
+  169: 	dfPurchasesFiltStats = dfPurchasesFilt.groupby(['productName']).agg({'productCount': ['min', 'max', 'mean', 'std', 'sum']});
+  170  	dfPurchasesFiltStats = dfPurchasesFiltStats['productCount'].sort_values('sum', ascending=[0]);
+  171  
+  ...
+  368  Set up PANDAS options at the beginning of the code
+  369  	import pandas as pd
+  370: 	pd.options.display.max_rows = 10
+  371  	pd.options.display.float_format = '{:.1f}'.format
+  372  	# Prevent the cell to be truncated
+  373: 	pd.set_option('display.max_colwidth', -1)
+  374  
+  375  Group values bigger than zero and group them:
+  ...
+  419  # rename columns in multiindex DFs
+  420  current_columns = dfGrouped.columns.levels[1].to_list()
+  421: d = {'max': 'latest', 'min': 'earliest', 'nunique': 'developers', 'count': 'number_PRs'}
+  422  new_columns = stu.replace_words_in_list(d, current_columns)
+  423  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_dataOps.py:
+    5  
+    6  
+    7: # Take the rows that contain the maximum per group
+    8  # In this example, retain the stores with the largest forecast
+    9  df = pd.DataFrame([ 
+   ..
+   16  	])
+   17  
+   18: idx = df.groupby(['store_id'])['forecast'].transform(max) == df['forecast']
+   19  df[idx]
+   20  
+   ..
+   82                  {'A':'foo', 'B':'blue', 'C': 20, 'D': 87}])
+   83  # option 1
+   84: aggregations  = {'D': 'mean', 'C': 'max'}
+   85  dfGrouped     = df.groupby('A', as_index=False).agg(aggregations).copy();
+   86  # option 2
+   ..
+   92  
+   93  # Some more tricks
+   94: aggregations  = {'createdAt': ['min', 'max', 'count'], 
+   95  'author': pd.Series.nunique}
+   96  dfGrouped     = df_pull_requests.groupby('baseRepository', as_index=False).agg(aggregations).copy()
+   ..
+  101  sqlQuery = '''select
+  102  A.ID, A.Site,A.Value2,A.Random,
+  103: C.minSD,C.maxSD,
+  104  sum(A.Value)     as totalValue
+  105  from df as A
+  106  inner join (select B.ID,     
+  107              min(B.StartDate) as minSD,
+  108:             max(B.EndDate)   as maxSD 
+  109              from df as B
+  110              group by 1) as C
+  ...
+  115  # Same with pandas (more on groupby)
+  116  varA      = 'ID';
+  117: dfGrouped = df.groupby(varA, as_index=False).agg({'StartDate': 'min', 'EndDate': 'max'}).copy();
+  118  
+  119  # merge (inner join, left join)
+  ...
+  173  
+  174  
+  175: MinMaxScaler().fit_transform(X)
+  176  
+  177: MinMaxScaler().fit_transform(this_series.values.reshape(-1, 1))
+  178  
+  179  
+  ...
+  194  
+  195  StandardScaler().fit_transform(x_prime)
+  196: MinMaxScaler().fit_transform(x_prime)
+  197  
+  198  
+  199  
+  200  column_transformation
+  201: df_2 = column_transformation(df, ['data'], type_transformation='MaxAbsScaler');
+  202  df_3 = column_transformation(df, ['data', 'normalised'], type_transformation='Normalizer');
+  203  
+  204  StandardScaler
+  205: MinMaxScaler
+  206: MaxAbsScaler
+  207  Normalizer
+  208  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_filtering.py:
+    5  Select by dates:
+    6  	minDate    = datetime(2016, 7, 1);
+    7: 	maxDate    = datetime(2016, 9, 1);
+    8: 	rangeDates = pd.date_range(minDate, maxDate);
+    9  	idxPeriodA = dfTrain['date'].isin(rangeDates);
+   10  	# directly...
+   ..
+   30  
+   31  
+   32: # Get the indices of the min and max
+   33: idx_max = df_pull_requests['bodyTextLenght'].idxmax()
+   34  idx_min = df_pull_requests['bodyTextLenght'].idxmin()
+   35  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_stats.py:
+   34  dfStats = mainDF.describe();
+   35  minVals = dfStats.ix['min'];
+   36: maxVals = dfStats.ix['max'];
+   37  
+   38  # stats for dates
+   39  dfStats = dfTrainPeriodA.date.describe();
+   40  minVals = dfStats.ix['first'];
+   41: maxVals = dfStats.ix['last'];
+   42: print('min date {} and max date {}'.format(minVals, maxVals));
+   43  
+   44  
+   45: Max of all values and max of each column:
+   46: 	maxValue = df.values.max();
+   47: 	xMax, yMax, zMax = df.max()
+   48  
+   49: mainDFNorm = (mainDF - minVals)/(maxVals-minVals);
+   50  
+   51  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_timeDate.py:
+   36  # Give it a go with dates
+   37  minDate  = min(dfPurchasesFD.date)
+   38: maxDate  = max(dfPurchasesFD.date)
+   39: idxDates = pd.date_range(minDate, maxDate)
+   40  
+   41: s       = pd.Series({minDate: 0, maxDate: 0})
+   42  s.index = pd.DatetimeIndex(s.index)
+   43  s       = s.reindex(idxDates, fill_value=0).to_frame('sales')
+   ..
+  109  
+  110  minDate  = min(dfPurchasesFD.date)
+  111: maxDate  = max(dfPurchasesFD.date)
+  112: idxDates = pd.date_range(minDate, maxDate)
+  113  
+  114: s       = pd.Series({minDate: 0, maxDate: 0})
+  115  s.index = pd.DatetimeIndex(s.index)
+  116  s       = s.reindex(idxDates, fill_value=0).to_frame('sales')
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_toyDatasets.py:
+   99  
+  100  Use combinations to create a dataframe:
+  101: skuDateDuple = list(itertools.product(pd.date_range(minDate, maxDate, freq='D'), ['das', 'gaa']))
+  102  df = pd.DataFrame(skuDateDuple, columns=['date', 'productid'])
+  103  df['sales'] = 0
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_aws_s3Utils.py:
+   74  def compress(string):
+   75      """
+   76:     Gzips a string using default compression level of 9, which is maximum
+   77      :param string:
+   78      :return: gzipped string
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_dataclasses.py:
+  105    isbn    : int = field(compare=False)
+  106    price   : int = field(default_factory=int, metadata={"currency":"Turkish Lira"})
+  107:   renters : list = field(default_factory=list, metadata={"max": 5}, repr=False)
+  108    def rent(self, name):
+  109      if len(self.renters) >= 5:
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_dataclasses_for_data.py:
+  224    isbn    : int = field(compare=False)
+  225    price   : int = field(default_factory=int, metadata={"currency":"Turkish Lira"})
+  226:   renters : list = field(default_factory=list, metadata={"max": 5}, repr=False)
+  227    def rent(self, name):
+  228      if len(self.renters) >= 5:
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_general.py:
+  309  
+  310  dir() – will display the defined symbols. Eg: >>>dir(str) – will only display the defined symbols. 
+  311: Built-in functions such as max(), min(), filter(), map(), etc is not apparent immediately as they are
+  312  available as part of standard module. dir(__builtins ) to view them.
+  313  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_goodPractices.py:
+    1  # PEP8
+    2: autopep8 -i --max-line-length 120 PATHTOFILE
+    3  
+    4  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_lambdas.py:
+   10  # Generate random values without replacement
+   11  np.random.choice(30, 3, replace=False)
+   12: get_slots = lambda max_vals: np.random.choice(max_vals, random.randint(0, max_vals), replace=False)
+   13  
+   14  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_lists.py:
+  127  
+  128  # Lowercase all elements in list
+  129: varsToExcludeFromModel = ['SourceInsertDate', 'SourceUpdateDate', 'maxClassRoomAuditDate', 
+  130: 'maxClassRoomPerformanceDate','maxClassRoomStartDate',	'minClassRoomStartDate', 
+  131  'DimOnlineTeacherKey', 'TeacherCenterName' , 	'TeacherAlterkey', 'TeacherCenterParentName', 
+  132  'TeacherCountry', 'TeacherKey', 'TeacherStatus', 'accessedDate', 'lastActivityDate']
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_multiprocessing.py:
+   10  
+   11  	cores      = mp.cpu_count() 
+   12: 	maxCores   = cores-1
+   13: 	pool       = mp.Pool(maxCores)
+   14  	# use partial to fix the arguments that don't change
+   15  	worker_a = partial(worker, b='b',c='c',d='d')
+   ..
+   35  
+   36  	cores      = mp.cpu_count() 
+   37: 	maxCores   = cores-1
+   38: 	pool       = mp.Pool(maxCores)
+   39  	# use partial to fix the arguments that don't change
+   40  	worker_a = partial(parallelSum, b='b',c='c',d='d')
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/renamePDFs.py:
+   38          # lenght 
+   39          titleLen = len(pdfTitle);
+   40:         maxLen   = 40;
+   41:         if titleLen>maxLen:
+   42:             pdfTitle = pdfTitle[0:maxLen];
+   43  
+   44          # new file name
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/sklearn.py:
+    1  Isolation forest distance-less regressors/classifiers available in sklearn
+    2: The IsolationForest ‘isolates’ observations by randomly selecting a feature and then randomly selecting a split value between the maximum and minimum values of the selected feature.
+    3  
+    4  
+    .
+   14  from sklearn.feature_extraction.text import CountVectorizer
+   15  plainText = df['Campaign Name'].tolist()
+   16: vect = CountVectorizer(min_df=0., max_df=1.0)
+   17  X = vect.fit_transform(plainText)
+   18  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/tensorflow_test_highlevel_APIs.py:
+   44                             kernel_regularizer=tf.keras.regularizers.l2(0.04),
+   45                             input_shape=(28, 28, 1)),
+   46:     tf.keras.layers.MaxPooling2D(),
+   47      tf.keras.layers.Flatten(),
+   48      tf.keras.layers.Dropout(0.1),
+   49      tf.keras.layers.Dense(64, activation='relu'),
+   50      tf.keras.layers.BatchNormalization(),
+   51:     tf.keras.layers.Dense(10, activation='softmax')
+   52  ])
+   53  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/TF2.0-VisualiseTensorboard.ipynb:
+   47      "    tf.keras.layers.Dense(512, activation='relu'),\n",
+   48      "    tf.keras.layers.Dropout(0.2),\n",
+   49:     "    tf.keras.layers.Dense(10, activation='softmax')\n",
+   50      "  ])"
+   51     ]
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/tf_example_2.0.py:
+   14    tf.keras.layers.Dense(128, activation='relu'),
+   15    tf.keras.layers.Dropout(0.2),
+   16:   tf.keras.layers.Dense(10, activation='softmax')
+   17  ])
+   18  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/visualisation.py:
+   21              linewidths=0.1, 
+   22              linecolor='white',
+   23:             vmax = .9,
+   24              square=True)
+   25  plt.title("Correlations Among Features", y = 1.03,fontsize = 20)
+   ..
+  110              validation_examples["latitude"],
+  111              cmap="coolwarm",
+  112:             c=validation_targets["median_house_value"] / validation_targets["median_house_value"].max())
+  113  
+  114  ax = plt.subplot(1,2,2)
+  ...
+  122              training_examples["latitude"],
+  123              cmap="coolwarm",
+  124:             c=training_targets["median_house_value"] / training_targets["median_house_value"].max())
+  125  
+  126  # drop the axis by using _ 
+
+125 matches across 35 files
+
+
+Searching 124 files for "timestamp"
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/mlLib_example_collaborative_filtering.py:
+   33  parts = lines.map(lambda row: row.value.split("::"))
+   34  ratingsRDD = parts.map(lambda p: Row(userId=int(p[0]), movieId=int(p[1]),
+   35:                                      rating=float(p[2]), timestamp=long(p[3])))
+   36  ratings = spark.createDataFrame(ratingsRDD)
+   37  (training, test) = ratings.randomSplit([0.8, 0.2])
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas.py:
+  122  	{1170: 'mqtt:type:shuffleDefault', 1171: 'mqtt:type:shuffleDefault', 1527: 'mqtt:type:1_blue_songs', 1528: 'mqtt:type:2_green_stories', 1529: 'mqtt:type:3_green_mix',
+  123   1530: 'mqtt:type:4_yellow_teeth', 1531: 'mqtt:type:6_purple_practice', 1532: 'mqtt:type:6_purple_practice'}, 
+  124:  'startTimestamp': {1170: pd.Timestamp('2019-09-05 14:16:15.630000'), 1171: pd.Timestamp('2019-09-05 14:16:58.107000'), 
+  125:  1527: pd.Timestamp('2019-09-03 07:49:21.981000'), 1528: pd.Timestamp('2019-09-03 07:49:45.745000'), 1529: pd.Timestamp('2019-09-03 07:50:12.277000'), 
+  126:  1530: pd.Timestamp('2019-09-03 07:51:28.660000'), 1531: pd.Timestamp('2019-09-03 07:53:03.288000'), 1532: pd.Timestamp('2019-09-03 07:53:03.288000')}, 
+  127   'thingName': {1170: 'yd_50a2fa522ad52120', 1171: 'yd_50a2fa522ad52120', 1527: 'yd_cf3eeed4bde0a27f', 1528: 'yd_cf3eeed4bde0a27f', 1529: 'yd_cf3eeed4bde0a27f', 
+  128:  1530: 'yd_cf3eeed4bde0a27f', 1531: 'yd_cf3eeed4bde0a27f', 1532: 'yd_cf3eeed4bde0a27f'}, 'receiveTimestamp': {1170: pd.Timestamp('2019-09-05 14:16:55.245000'), 
+  129:  1171: pd.Timestamp('2019-09-05 14:16:58.378000'), 1527: pd.Timestamp('2019-09-03 07:49:36.372000'), 1528: pd.Timestamp('2019-09-03 07:49:46.131000'), 
+  130:  1529: pd.Timestamp('2019-09-03 07:50:14.951000'), 1530: pd.Timestamp('2019-09-03 07:51:29.509000'), 1531: pd.Timestamp('2019-09-03 07:53:05.376000'), 
+  131:  1532: pd.Timestamp('2019-09-03 07:53:14.050000')}, 'eventType': {1170: 'onetime', 1171: 'onetime', 1527: 'onetime', 1528: 'onetime', 1529: 'onetime', 
+  132   1530: 'onetime', 1531: 'onetime', 1532: 'onetime'}, 'activityId': {1170: '188', 1171: '197', 1527: '249', 1528: '263', 1529: '265', 1530: '266', 1531: '270', 1532: '270'}, 
+  133   'duration': {1170: 37.0, 1171: 0.0, 1527: 13.0, 1528: 0.0, 1529: 0.0, 1530: 0.0, 1531: 1.0, 1532: 10.0}, 
+  ...
+  187  
+  188  [Added to the cookbook]
+  189: Time operations. Get hour and month from timestamp
+  190  
+  191: df = pd.DataFrame([{'Timestamp': pd.tslib.Timestamp.now()}]);
+  192: df['month']       = df.Timestamp.dt.month;
+  193: df['hour']        = df.Timestamp.dt.hour;
+  194: df['day']         = df.Timestamp.dt.day;
+  195: df['day_of_week'] = df.Timestamp.dt.dayofweek;
+  196  
+  197  
+  ...
+  379  
+  380  
+  381: Filter by timestamp:
+  382: idxValidTimes = (dfTPoints['Timestamp'] > '2017-12-12 14:00') & (dfTPoints['Timestamp'] < '2017-12-12 17:00')
+  383  
+  384  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_casting.py:
+   55  datetime.strptime('02-07-2017', '%d-%m-%Y').date()
+   56  
+   57: # From timestamp to string:
+   58  stocks.index[-1].strftime('%Y-%m-%d')
+   59  
+   60: # From timestamp to string:
+   61  dateAsStr = dfTest['date'].dt.strftime('%d_%m_%Y');
+   62  
+   63  
+   64  # From string to date:
+   65: pd.to_datetime(thisCookieID_Clicks['Timestamp'], format='%Y-%m-%d %H:%M:%S')
+   66  
+   67  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_filtering.py:
+   12  
+   13  
+   14: Pandas timestamps as strings:
+   15: #timestamp   
+   16: df['thisTimeStamp'] = df['yyyy_mm_dd'].apply(lambda x: x.strftime('%Y-%m-%d %H:%M:%S'));
+   17  
+   18: Strings to Pandas timestamp:
+   19: pd.to_datetime(thisCookieID_Clicks['Timestamp'], format='%Y-%m-%d %H:%M:%S')
+   20  
+   21: # extract the date from a timestamp
+   22  dfSnowplow['date'] = dfSnowplow.dvce_tstamp.apply(lambda x: x.date());
+   23  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_modin.py:
+   11  '2018-02-09 14:30:00+03:00','2018-02-09 19:30:00+08:00']
+   12  df = pd.DataFrame(
+   13:     {'start_date': pd.Timestamp('09/02/2018  06:30:00'),
+   14      'country': pd.Categorical(countryList),
+   15      'local_start_date': expectedTimes
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_timeDate.py:
+    1: Time operations. Get hour and month from timestamp
+    2  
+    3: df = pd.DataFrame([{'Timestamp': pd.tslib.Timestamp.now()}]);
+    4: df['month']       = df.Timestamp.dt.month;
+    5: df['hour']        = df.Timestamp.dt.hour;
+    6: df['day']         = df.Timestamp.dt.day;
+    7: df['day_of_week'] = df.Timestamp.dt.dayofweek;
+    8  
+    9  
+   10: # Filter a column based on a timestamp
+   11: idx = df['startTimestamp'] >= pd.Timestamp('2019-09-19')
+   12  
+   13  
+   ..
+   17  
+   18  #Date differences in Pandas. Get a column with the date of a lagged day:
+   19: df = pd.DataFrame({ 'A' : 1., 'date' : pd.Timestamp('20130102') }, index=[0])
+   20  currentLag = 1;
+   21  df['dayLagged_{}'.format(currentLag)] = df.date - timedelta(days=currentLag);
+   ..
+   51  
+   52  
+   53: df = pd.DataFrame([{'unit_sales' :1, 'date' : pd.Timestamp('20130103'), 'store_nbr' : 2, 'onpromo': True }, 
+   54: 				  {'unit_sales' : 7, 'date' : pd.Timestamp('20130106'), 'store_nbr' : 2, 'onpromo': False }, 
+   55: 				  {'unit_sales' : 2, 'date' : pd.Timestamp('20130102'), 'store_nbr' : 1, 'onpromo': True  }])
+   56  
+   57  varsToKeep = ['unit_sales', 'date', 'store_nbr', 'onpromo'];
+   ..
+   80  
+   81  
+   82: #From timestamp to string:
+   83  dateAsStr = dfTest['date'].dt.strftime('%d_%m_%Y');
+   84  
+   ..
+   87  datetime.strptime('02-07-2017', '%d-%m-%Y').date()
+   88  
+   89: #From timestamp to string:
+   90  stocks.index[-1].strftime('%Y-%m-%d')
+   91  
+   ..
+   93  
+   94  #From string to date (PANDAS)):
+   95: pd.to_datetime(thisCookieID_Clicks['Timestamp'], format='%Y-%m-%d %H:%M:%S')
+   96  
+   97  
+   ..
+  118  
+  119  From string to date:
+  120: pd.to_datetime(thisCookieID_Clicks['Timestamp'], format='%Y-%m-%d %H:%M:%S')
+  121  
+  122  
+  123  
+  124: From timestamp to date:
+  125: 	df_activities['date'] = df_activities['startTimestamp'].apply(lambda ts: ts.date())
+  126  
+  127  a bit more complex. Dates to string in a required format and then unique and to a list:
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_toyDatasets.py:
+   31  '2018-02-09 14:30:00+03:00','2018-02-09 19:30:00+08:00']
+   32  df = pd.DataFrame(
+   33:     {'start_date': pd.Timestamp('09/02/2018  06:30:00'),
+   34      'country': pd.Categorical(countryList),
+   35      'local_start_date': expectedTimes
+   ..
+   39  
+   40  df2 = pd.DataFrame({ 'A' : 1.,
+   41: ....:                      'B' : pd.Timestamp('20130102'),
+   42  ....:                      'C' : pd.Series(1,index=list(range(4)),dtype='float32'),
+   43  ....:                      'D' : np.array([3] * 4,dtype='int32'),
+   ..
+  110  from datetime import date, timedelta
+  111  
+  112: df = pd.DataFrame([{'unit_sales' :1, 'date' : pd.Timestamp('20130103'), 'store_nbr' : 2, 'onpromo': True }, 
+  113:                   {'unit_sales' : 7, 'date' : pd.Timestamp('20130106'), 'store_nbr' : 2, 'onpromo': False }, 
+  114:                   {'unit_sales' : 2, 'date' : pd.Timestamp('20130102'), 'store_nbr' : 1, 'onpromo': True  }])
+  115  
+  116  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_casting.py:
+    4  datetime.strptime('02-07-2017', '%d-%m-%Y').date()
+    5  
+    6: From timestamp to string:
+    7  	 stocks.index[-1].strftime('%Y-%m-%d')
+    8  
+    9: From timestamp to string:
+   10  	dateAsStr = dfTest['date'].dt.strftime('%d_%m_%Y');
+   11  
+   12: Produce a timestamp as string (saving files)
+   13  from datetime import datetime
+   14  datetime.now().strftime('%d_%m_%Y')
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_dictionaries.py:
+  103  
+  104  # Dictionary with empty values
+  105: vars_to_keep = ['userId', 'type', 'event', 'originalTimestamp', 'traits']
+  106  temp_dict = dict.fromkeys(vars_to_keep,[])
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_filesystem.py:
+   13          if os.path.isfile(filePath):
+   14              files.append(f)
+   15:             file_ct = datetime.fromtimestamp(os.stat(filePath).st_ctime)
+   16              _, current_extension = os.path.splitext(filePath)
+   17              folderName = os.path.join(filePath, 'sorted', str(file_ct.year), file_ct.strftime("%B"), current_extension)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_parquet.py:
+  241  dfAdform.registerTempTable("dfAdformSQL")
+  242  sqlQuery ="""SELECT 
+  243: TO_DATE(CAST(UNIX_TIMESTAMP(dfAdformSQL.date, 'dd-MM-yyyy') AS TIMESTAMP)) as date,
+  244  CookieID,
+  245  DeviceTypeID
+  ...
+  291  import pyarrow as pa
+  292  import pyarrow.parquet as pq
+  293: table = pa.Table.from_pandas(data_frame, timestamps_to_ms=True)
+  294  #  Snappy compression by default
+  295  pq.write_table(table, '<filename>')
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_timeDate.py:
+   33  
+   34  
+   35: Produce a timestamp as string (saving files)
+   36  from datetime import datetime
+   37  datetime.now().strftime('%d_%m_%Y')
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_timezones.py:
+   10   
+   11  df = pd.DataFrame(
+   12:     {'start_date': pd.Timestamp('09/02/2018  06:30:00'),
+   13      'country': pd.Categorical(countryList),
+   14      'local_start_date': expectedTimes,
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/sort_files.py:
+   12          if os.path.isfile(filePath) and '.DS_Store' not in filePath and 'sort_files.py' not in filePath:
+   13              files.append(f)
+   14:             file_ct = datetime.fromtimestamp(os.stat(filePath).st_birthtime)
+   15              _, current_extension = os.path.splitext(filePath)
+   16              folderName = os.path.join(thisPath, 'sorted', str(file_ct.year), \
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/sort_files_subfolders.py:
+   11            filePath = os.path.join(root, f)
+   12            if os.path.isfile(filePath) and '.DS_Store' not in filePath and 'sort_files.py' not in filePath:
+   13:               file_ct = datetime.fromtimestamp(os.stat(filePath).st_birthtime)
+   14                _, current_extension = os.path.splitext(filePath)
+   15                folderName = os.path.join(thisPath, 'sorted', str(file_ct.year), \
+
+76 matches across 15 files
+
+
+Searching 124 files for "timestamp to date"
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_timeDate.py:
+  122  
+  123  
+  124: From timestamp to date:
+  125  	df_activities['date'] = df_activities['startTimestamp'].apply(lambda ts: ts.date())
+  126  
+
+1 match in 1 file
+
+
+Searching 124 files for "timedelta"
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ML_training_several_models.py:
+    3  import pandas as pd
+    4  import matplotlib.pyplot as plt
+    5: from datetime import timedelta
+    6  from pandas.tools.plotting import scatter_matrix
+    7  from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_filtering.py:
+   26  Time differences with Pandas:
+   27  Pandas series less than a minute
+   28: 	timeDiffBetweenCookies < np.timedelta64(1, 'm')
+   29  
+   30  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_timeDate.py:
+   12  
+   13  
+   14: # Get the minutes(seconds) of a timedelta
+   15  df_adhoc_ext['block_total_minutes'] = (df_adhoc_ext['ts_end'] - df_adhoc_ext['ts_begin']).apply(lambda x: x.total_seconds()/60.0)
+   16  
+   ..
+   19  df = pd.DataFrame({ 'A' : 1., 'date' : pd.Timestamp('20130102') }, index=[0])
+   20  currentLag = 1;
+   21: df['dayLagged_{}'.format(currentLag)] = df.date - timedelta(days=currentLag);
+   22  
+   23  
+   ..
+   48  import pandas as pd
+   49  from dateutil.relativedelta import relativedelta
+   50: from datetime import date, timedelta
+   51  
+   52  
+   ..
+   60  for currentLag in range(1,28+1):
+   61  	currentLagVar     = 'dLag_{}'.format(currentLag);
+   62: 	df[currentLagVar] = df.date - timedelta(days=currentLag);
+   63  	varsToKeepRightDF = [x + '_' + currentLagVar for x in ['unit_sales', 'onpromo']]
+   64  	allVarsToKeep     = varsToKeep
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_toyDatasets.py:
+  108  import pandas as pd
+  109  from dateutil.relativedelta import relativedelta
+  110: from datetime import date, timedelta
+  111  
+  112  df = pd.DataFrame([{'unit_sales' :1, 'date' : pd.Timestamp('20130103'), 'store_nbr' : 2, 'onpromo': True }, 
+
+7 matches across 4 files
+
+
+Searching 124 files for "date"
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/aws_kinesis.py:
+   53  event_producer = 'TeachersFirst'
+   54  event_id       = str(uuid.uuid4()) 
+   55: event_time     = datetime.datetime.utcnow().\
+   56: replace(tzinfo=datetime.timezone.utc).isoformat()
+   57  
+   58  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/bunch.py:
+    5  adform = Bunch()
+    6  adform.disable_ingest = False
+    7: adform.start_date = datetime(2018,06,27) # manual backfill before that date
+    8  adform.crawler = None  # 'mip_adform_live'
+    9  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/kaggle_lightGBM.py:
+   12  from sklearn.model_selection import GridSearchCV, cross_val_score, train_test_split, GridSearchCV, RandomizedSearchCV
+   13  from sklearn.metrics import precision_score, recall_score, confusion_matrix,  roc_curve, precision_recall_curve, accuracy_score, roc_auc_score
+   14: from datetime import datetime
+   15  import lightgbm as lgbm
+   16  import warnings
+   ..
+  137      fig.append_trace(trace7,3,1)
+  138      
+  139:     fig['layout'].update(showlegend = False, title = '<b>Model performance report</b><br>'+str(model),
+  140                          autosize = False, height = 1500,width = 830,
+  141                          plot_bgcolor = 'black',
+  142                          paper_bgcolor = 'black',
+  143                          margin = dict(b = 195), font=dict(color='white'))
+  144:     fig["layout"]["xaxis1"].update(color = 'white')
+  145:     fig["layout"]["yaxis1"].update(color = 'white')
+  146:     fig["layout"]["xaxis2"].update((dict(range=[0, 1], color = 'white')))
+  147:     fig["layout"]["yaxis2"].update(color = 'white')
+  148:     fig["layout"]["xaxis3"].update(dict(title = "false positive rate"), color = 'white')
+  149:     fig["layout"]["yaxis3"].update(dict(title = "true positive rate"),color = 'white')
+  150:     fig["layout"]["xaxis4"].update(dict(title = "recall"), range = [0,1.05],color = 'white')
+  151:     fig["layout"]["yaxis4"].update(dict(title = "precision"), range = [0,1.05],color = 'white')
+  152:     fig["layout"]["xaxis5"].update(dict(title = "Percentage contacted"),color = 'white')
+  153:     fig["layout"]["yaxis5"].update(dict(title = "Percentage positive targeted"),color = 'white')
+  154:     fig["layout"]["xaxis6"].update(color = 'white')
+  155:     fig["layout"]["yaxis6"].update(color = 'white')
+  156      for i in fig['layout']['annotations']:
+  157          i['font'] = titlefont=dict(color='white', size = 14)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ml_BayesianOptimisation.py:
+  200  
+  201  
+  202: ## Updates June 2019
+  203  '''
+  204      Quick review of the two main libraries
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ML_SHAP.py:
+  176  Y = df.iloc[0:300][responseVar].values
+  177  
+  178: # validate
+  179  X_val = df.iloc[300:400][inputVars].values
+  180  y_val = df.iloc[300:400][responseVar].values
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ML_training_several_models.py:
+    3  import pandas as pd
+    4  import matplotlib.pyplot as plt
+    5: from datetime import timedelta
+    6  from pandas.tools.plotting import scatter_matrix
+    7  from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ml_XGBoost.py:
+   33  
+   34  
+   35: params.update({'process_type': 'update',
+   36:                'updater'     : 'refresh',
+   37                 'refresh_leaf': True})
+   38: model_2_v2_update = xgb.train(params, xg_train_2, 30, xgb_model=model_1)
+   39  
+   40  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas.py:
+  160  # A good graphical explanation in http://pbpython.com/images/pivot-table-datasheet.png
+  161  df3 = pd.pivot_table(df, index=["widget_text", "dvce_type",'ue_widget_selection'],
+  162:                      columns = ['date'], values = ['hour'], 
+  163  					 aggfunc='count', fill_value = 0, margins = True)
+  164  
+  ...
+  354  
+  355  
+  356: Add columns in a DF where we want to keep the date index.In this case, 
+  357: we read every 'df' and add it to main_df keeping the dates as an index. The gaps will be filled with Nan
+  358  Replace the Nan's with zeroes
+  359  	df.fillna(0, inplace=True)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_casting.py:
+   51  
+   52  
+   53: # Must be another way without calling datetime...
+   54: from datetime import datetime
+   55: datetime.strptime('02-07-2017', '%d-%m-%Y').date()
+   56  
+   57  # From timestamp to string:
+   ..
+   59  
+   60  # From timestamp to string:
+   61: dateAsStr = dfTest['date'].dt.strftime('%d_%m_%Y');
+   62  
+   63  
+   64: # From string to date:
+   65: pd.to_datetime(thisCookieID_Clicks['Timestamp'], format='%Y-%m-%d %H:%M:%S')
+   66  
+   67  
+   68: #Convert from standard date format to simple numbers in a dataframe
+   69: import matplotlib.dates   as mdates	
+   70: df['Date'] = df['Date'].map(mdates.date2num);
+   71  
+   72  
+   73  
+   74: # Date conversion
+   75: data['date'] = pd.to_datetime(data['date'])
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_dataOps.py:
+  105  from df as A
+  106  inner join (select B.ID,     
+  107:             min(B.StartDate) as minSD,
+  108:             max(B.EndDate)   as maxSD 
+  109              from df as B
+  110              group by 1) as C
+  ...
+  115  # Same with pandas (more on groupby)
+  116  varA      = 'ID';
+  117: dfGrouped = df.groupby(varA, as_index=False).agg({'StartDate': 'min', 'EndDate': 'max'}).copy();
+  118  
+  119  # merge (inner join, left join)
+  120: varsToKeep = ['ID', 'Value', 'Site', 'Value2', 'Random', 'StartDate_grp', 'EndDate_grp'];
+  121  dfTemp = pd.merge(df, dfGrouped, how='inner', on='ID', suffixes=(' ', '_grp'), copy=True)[varsToKeep];
+  122  
+  123: dfBreakDown = dfTemp.groupby(['ID', 'Site', 'Value2', 'Random', 'StartDate_grp',
+  124:        'EndDate_grp']).sum()
+  125  
+  126  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_filtering.py:
+    3  
+    4  
+    5: Select by dates:
+    6: 	minDate    = datetime(2016, 7, 1);
+    7: 	maxDate    = datetime(2016, 9, 1);
+    8: 	rangeDates = pd.date_range(minDate, maxDate);
+    9: 	idxPeriodA = dfTrain['date'].isin(rangeDates);
+   10  	# directly...
+   11: 	dfA = dfTrain[rangeDates]
+   12  
+   13  
+   ..
+   17  
+   18  Strings to Pandas timestamp:
+   19: pd.to_datetime(thisCookieID_Clicks['Timestamp'], format='%Y-%m-%d %H:%M:%S')
+   20  
+   21: # extract the date from a timestamp
+   22: dfSnowplow['date'] = dfSnowplow.dvce_tstamp.apply(lambda x: x.date());
+   23  
+   24  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_indexing.py:
+    4  	"/Users/carlos.aguilar/Documents/Kaggle Competition/Grocery Sales Forecasting/test.csv", usecols=[0, 1, 2, 3, 4],
+    5  	dtype={'onpromotion': bool},
+    6: 	parse_dates=["date"]  # , date_parser=parser
+    7: ).set_index(['store_nbr', 'item_nbr', 'date'])
+    8  # get the index values so we can perform search, etc operations
+    9  storeValues = df_test.index.get_level_values(0)
+   10  itemValues = df_test.index.get_level_values(1)
+   11: dateValues = df_test.index.get_level_values(2)
+   12  # get the data for this particular item
+   13  idxItem = itemValues == 310671;
+   ..
+   71  
+   72  
+   73: # create a DF with the indexes "store_nbr", "item_nbr", "date" and
+   74: # unstack the dates so the columns are the combination "onpromotion", "date"
+   75  promo_2017_train = df_2017.set_index(
+   76:     ["store_nbr", "item_nbr", "date"])[["onpromotion"]].unstack(
+   77          level=-1).fillna(False)
+   78: # Then, remove the "onpromotion" from the columns to just have the "dates"
+   79  promo_2017_train.columns = promo_2017_train.columns.get_level_values(1)
+   80  
+   ..
+   89  del promo_2017_test, promo_2017_train
+   90  
+   91: # Set the date as columns and if the sales are not found, set them to zero
+   92  df_2017 = df_2017.set_index(
+   93:     ["store_nbr", "item_nbr", "date"])[["unit_sales"]].unstack(
+   94          level=-1).fillna(0) 
+   95  df_2017.columns = df_2017.columns.get_level_values(1)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_modin.py:
+   11  '2018-02-09 14:30:00+03:00','2018-02-09 19:30:00+08:00']
+   12  df = pd.DataFrame(
+   13:     {'start_date': pd.Timestamp('09/02/2018  06:30:00'),
+   14      'country': pd.Categorical(countryList),
+   15:     'local_start_date': expectedTimes
+   16      })
+   17  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_readData.py:
+    1  # Read and filter a csv file with PD:
+    2: # Read the csv file and get the valid dates
+    3  dfTrain = pd.read_csv(csvPath,
+    4: 		parse_dates=['date'],
+    5  		low_memory=False, 
+    6  		dtype={'id':np.uint32, 'store_nbr':np.uint8, 'item_nbr': np.uint32,
+    7  		'onpromotion': np.bool, 'unit_sales': np.float32});
+    8  
+    9: idxTrain = dfTrain.date >= minDate;
+   10  dfTrain = dfTrain.ix[idxTrain];
+   11  
+   12  
+   13  Skip rows when reading a dataframe:
+   14: train = pd.read_csv('../input/train.csv', usecols=[1,2,3,4], dtype=dtypes, parse_dates=['date'],
+   15                      skiprows=range(1, 86672217) 
+   16  
+   ..
+   37  'Number of Customer Reviews':np.int64,
+   38  'Number of Customer Reviews - Prior Period':np.int64,
+   39: 'Number of Customer Reviews - Life-to-Date':np.int64,
+   40  'Average Customer Rating':np.float64,
+   41  'Average Customer Rating - Prior Period':np.float64,
+   42: 'Average Customer Rating - Life-to-Date':np.float64,
+   43  '5 Stars':np.int64,
+   44  '4 Stars':np.int64,
+   ..
+   57  	"/Users/carlos.aguilar/Documents/Kaggle Competition/Grocery Sales Forecasting/test.csv", usecols=[0, 1, 2, 3, 4],
+   58  	dtype={'onpromotion': bool},
+   59: 	parse_dates=["date"]  # , date_parser=parser
+   60: ).set_index(['store_nbr', 'item_nbr', 'date'])
+   61  # get the index values so we can perform search, etc operations
+   62  storeValues = df_test.index.get_level_values(0)
+   63  itemValues = df_test.index.get_level_values(1)
+   64: dateValues = df_test.index.get_level_values(2)
+   65  # get the data for this particular item
+   66  idxItem = itemValues == 310671;
+   ..
+   75      converters={'unit_sales': lambda u: np.log1p(
+   76          float(u)) if float(u) > 0 else 0},
+   77:     parse_dates=["date"],
+   78      skiprows=range(1, 66458909))
+   79  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_stats.py:
+   36  maxVals = dfStats.ix['max'];
+   37  
+   38: # stats for dates
+   39: dfStats = dfTrainPeriodA.date.describe();
+   40  minVals = dfStats.ix['first'];
+   41  maxVals = dfStats.ix['last'];
+   42: print('min date {} and max date {}'.format(minVals, maxVals));
+   43  
+   44  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_timeDate.py:
+   16  
+   17  
+   18: #Date differences in Pandas. Get a column with the date of a lagged day:
+   19: df = pd.DataFrame({ 'A' : 1., 'date' : pd.Timestamp('20130102') }, index=[0])
+   20  currentLag = 1;
+   21: df['dayLagged_{}'.format(currentLag)] = df.date - timedelta(days=currentLag);
+   22  
+   23  
+   24  # Get all the weeks since the 2nd of Sept
+   25: valid_from = pd.to_datetime('02-09-2019', format='%d-%m-%Y')
+   26: valid_to = pd.to_datetime(datetime.now())
+   27: idxDates = pd.date_range(valid_from, valid_to, freq='W')
+   28  
+   29  
+   30: # Matlab's datenum
+   31: from datetime import date
+   32: print(date.toordinal(date(1970,1,1)))
+   33: df.date.apply(date.toordinal)
+   34  
+   35  
+   36: # Give it a go with dates
+   37: minDate  = min(dfPurchasesFD.date)
+   38: maxDate  = max(dfPurchasesFD.date)
+   39: idxDates = pd.date_range(minDate, maxDate)
+   40  
+   41: s       = pd.Series({minDate: 0, maxDate: 0})
+   42: s.index = pd.DatetimeIndex(s.index)
+   43: s       = s.reindex(idxDates, fill_value=0).to_frame('sales')
+   44  
+   45  
+   ..
+   47  # Snippet
+   48  import pandas as pd
+   49: from dateutil.relativedelta import relativedelta
+   50: from datetime import date, timedelta
+   51  
+   52  
+   53: df = pd.DataFrame([{'unit_sales' :1, 'date' : pd.Timestamp('20130103'), 'store_nbr' : 2, 'onpromo': True }, 
+   54: 				  {'unit_sales' : 7, 'date' : pd.Timestamp('20130106'), 'store_nbr' : 2, 'onpromo': False }, 
+   55: 				  {'unit_sales' : 2, 'date' : pd.Timestamp('20130102'), 'store_nbr' : 1, 'onpromo': True  }])
+   56  
+   57: varsToKeep = ['unit_sales', 'date', 'store_nbr', 'onpromo'];
+   58: leftKeys   = ['date', 'store_nbr']
+   59  
+   60  for currentLag in range(1,28+1):
+   61  	currentLagVar     = 'dLag_{}'.format(currentLag);
+   62: 	df[currentLagVar] = df.date - timedelta(days=currentLag);
+   63  	varsToKeepRightDF = [x + '_' + currentLagVar for x in ['unit_sales', 'onpromo']]
+   64  	allVarsToKeep     = varsToKeep
+   ..
+   68  	rightKeys = [currentLagVar, 'store_nbr'];
+   69  	dfTemp    = pd.merge(df, df, how='left', left_on=leftKeys, right_on=rightKeys,  suffixes=('', '_' + currentLagVar), copy=True);
+   70: 	# Update the DF
+   71  	df = dfTemp[allVarsToKeep].copy();
+   72  	varsToKeep = allVarsToKeep
+   ..
+   75  
+   76  # get the following 16 days...
+   77: t2017 = date(2017, 5, 31)
+   78: pd.date_range(t2017, periods=16)
+   79  
+   80  
+   81  
+   82  #From timestamp to string:
+   83: dateAsStr = dfTest['date'].dt.strftime('%d_%m_%Y');
+   84  
+   85: # Must be another way without calling datetime...
+   86: from datetime import datetime
+   87: datetime.strptime('02-07-2017', '%d-%m-%Y').date()
+   88  
+   89  #From timestamp to string:
+   ..
+   92  
+   93  
+   94: #From string to date (PANDAS)):
+   95: pd.to_datetime(thisCookieID_Clicks['Timestamp'], format='%Y-%m-%d %H:%M:%S')
+   96  
+   97  
+   98: # a bit more complex. Dates to string in a required format and then unique and to a list:
+   99  idxValid = dfCITemp['retrieveRow'] > 0
+  100: listOfDates = dfCITemp['date'].ix[idxValid].dt.strftime('%Y_%m_%d').unique().tolist()
+  101  
+  102  
+  103  
+  104: # Normal Python from string to date
+  105: datetime.strptime(war_start, '%Y-%m-%d')
+  106  
+  107  
+  108  
+  109  
+  110: minDate  = min(dfPurchasesFD.date)
+  111: maxDate  = max(dfPurchasesFD.date)
+  112: idxDates = pd.date_range(minDate, maxDate)
+  113  
+  114: s       = pd.Series({minDate: 0, maxDate: 0})
+  115: s.index = pd.DatetimeIndex(s.index)
+  116: s       = s.reindex(idxDates, fill_value=0).to_frame('sales')
+  117  
+  118  
+  119: From string to date:
+  120: pd.to_datetime(thisCookieID_Clicks['Timestamp'], format='%Y-%m-%d %H:%M:%S')
+  121  
+  122  
+  123  
+  124: From timestamp to date:
+  125: 	df_activities['date'] = df_activities['startTimestamp'].apply(lambda ts: ts.date())
+  126  
+  127: a bit more complex. Dates to string in a required format and then unique and to a list:
+  128  	idxValid = dfCITemp['retrieveRow'] > 0
+  129: 	listOfDates = dfCITemp['date'].ix[idxValid].dt.strftime('%Y_%m_%d').unique().tolist()
+  130  
+  131  
+  132  # today
+  133: import datetime
+  134: now = datetime.datetime.now()
+  135  
+  136  
+  137  # Go back 6 months from today
+  138: from datetime import date
+  139: from dateutil.relativedelta import relativedelta
+  140: six_months = date.today() - relativedelta(months=6)
+  141  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_toyDatasets.py:
+   31  '2018-02-09 14:30:00+03:00','2018-02-09 19:30:00+08:00']
+   32  df = pd.DataFrame(
+   33:     {'start_date': pd.Timestamp('09/02/2018  06:30:00'),
+   34      'country': pd.Categorical(countryList),
+   35:     'local_start_date': expectedTimes
+   36      })
+   37  
+   ..
+   82  
+   83  dataframe = pd.DataFrame({
+   84:     "date_time": [ generate_random_date_in_last_year() for _ in range(10)],
+   85      "animal": ['zebra','zebra','zebra','zebra','lion','lion','lion','lion','rhino','rhino',],
+   86      "category": ['stripy'] * 4 + ['dangerous'] * 6,
+   ..
+   99  
+  100  Use combinations to create a dataframe:
+  101: skuDateDuple = list(itertools.product(pd.date_range(minDate, maxDate, freq='D'), ['das', 'gaa']))
+  102: df = pd.DataFrame(skuDateDuple, columns=['date', 'productid'])
+  103  df['sales'] = 0
+  104  
+  ...
+  107  
+  108  import pandas as pd
+  109: from dateutil.relativedelta import relativedelta
+  110: from datetime import date, timedelta
+  111  
+  112: df = pd.DataFrame([{'unit_sales' :1, 'date' : pd.Timestamp('20130103'), 'store_nbr' : 2, 'onpromo': True }, 
+  113:                   {'unit_sales' : 7, 'date' : pd.Timestamp('20130106'), 'store_nbr' : 2, 'onpromo': False }, 
+  114:                   {'unit_sales' : 2, 'date' : pd.Timestamp('20130102'), 'store_nbr' : 1, 'onpromo': True  }])
+  115  
+  116  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pyspark.py:
+   35  parquetDF   = sqlContext.read.parquet(tpParquet)
+   36  
+   37: currentFile = 'tpsUnavailable_' + datetime.now().strftime(dtFormat) + '.pickle';
+   38  pckFile     = os.path.join(outputFolder, currentFile);
+   39  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_aws_s3Utils.py:
+  165      input_catalogue.product_ean.fillna(0, inplace=True)
+  166      input_catalogue.product_ean = input_catalogue.product_ean.astype(int).astype(str)
+  167:     input_catalogue['creation_date'] = pd.to_datetime(input_catalogue['creation_date'])
+  168      # force the integers to float
+  169      int_colnames = input_catalogue.select_dtypes(include=['int']).columns
+  ...
+  176  def read_csv_catalogue(csv_path):
+  177      input_catalogue = pd.read_csv(csv_path, 
+  178:         parse_dates=['creation_date'], 
+  179          delimiter=',', 
+  180:         infer_datetime_format=True
+  181      )
+  182  
+  183      input_catalogue.product_ean.fillna(0, inplace=True)
+  184      input_catalogue.product_ean = input_catalogue.product_ean.astype(int).astype(str)
+  185:     #input_catalogue['creation_date'] = pd.to_datetime(input_catalogue['creation_date'])
+  186      # force the integers to float
+  187      int_colnames = input_catalogue.select_dtypes(include=['int']).columns
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_casting.py:
+    1: Date formats:
+    2: # Must be another way without calling datetime...
+    3: from datetime import datetime
+    4: datetime.strptime('02-07-2017', '%d-%m-%Y').date()
+    5  
+    6  From timestamp to string:
+    .
+    8  
+    9  From timestamp to string:
+   10: 	dateAsStr = dfTest['date'].dt.strftime('%d_%m_%Y');
+   11  
+   12  Produce a timestamp as string (saving files)
+   13: from datetime import datetime
+   14: datetime.now().strftime('%d_%m_%Y')
+   15  
+   16  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_classes.py:
+    4  '''
+    5  
+    6: from datetime import datetime
+    7  import boto3
+    8  import pandas as pd
+    .
+   20      __region_name    = ''
+   21      __s3_staging_dir = ''
+   22:     __createdAt      = datetime.now()
+   23      
+   24      # Public attributes
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_connectivity_DB.py:
+    2  host     =  'localhost'
+    3  port     =  '5432'
+    4: user     =  'candidate'
+    5  password =  '3TqcrjTe0x1ljehu'
+    6  database =  'gocardless'
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_dataclasses.py:
+   98  
+   99  
+  100: # Use field for values that can be updated at a later time, instead of creation time
+  101  @dataclass
+  102  class Booker2:
+  ...
+  143    director: str
+  144    producer: str
+  145:   release_date: datetime
+  146:   created: datetime
+  147:   edited: datetime
+  148    url: str
+  149    characters: List[str]
+  ...
+  153    species: List[str]
+  154    def __post_init__(self):
+  155:     if type(self.release_date) is str:
+  156:     self.release_date = dateutil.parser.parse(self.release_date)
+  157    
+  158      if type(self.created) is str:
+  159:         self.created = dateutil.parser.parse(self.created)
+  160    
+  161      if type(self.edited) is str:
+  162:         self.edited = dateutil.parser.parse(self.edited)
+  163    # same post init by Peter Norvig     
+  164    def __post_init__(self):
+  165:   for attr in [‘release_date’, ‘created’, ‘edited’]:
+  166          if isinstance(getattr(self, attr), str):
+  167:               setattr(self, attr, dateutil.parser.parse(getattr(self, attr)))
+  168  
+  169  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_dataclasses_for_data.py:
+   17  import random, json
+   18  from dataclasses import dataclass, asdict, field
+   19: import datetime as dt
+   20  from typing import List
+   21  import os
+   ..
+   25      data_type: str
+   26      file_location: str
+   27:     creation_time: dt.datetime = dt.datetime.utcnow().\
+   28          replace(tzinfo=dt.timezone.utc).isoformat()
+   29      description: str = 'Not provided'
+   ..
+  105      data_type: str
+  106      file_location: str
+  107:     creation_time: dt.datetime = dt.datetime.utcnow().\
+  108          replace(tzinfo=dt.timezone.utc).isoformat()
+  109      description: str = 'Not provided'
+  ...
+  132    director: str
+  133    producer: str
+  134:   release_date: datetime
+  135:   created: datetime
+  136:   edited: datetime
+  137    url: str
+  138    characters: List[str]
+  ...
+  217  
+  218  
+  219: # Use field for values that can be updated at a later time, instead of creation time
+  220  @dataclass
+  221  class Booker2:
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_dictionaries.py:
+   89      
+   90  
+   91: # Update a dictionary - it will OVERWRITE the field '2'
+   92  d  = {1: "one", 2: "three"}
+   93  d1 = {2: "two"}
+   94: d.update(d1)
+   95  
+   96  # or adding more values
+   97: d.update({'f': 432, 'j': "fgadsg"})
+   98  
+   99  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_filesystem.py:
+   13          if os.path.isfile(filePath):
+   14              files.append(f)
+   15:             file_ct = datetime.fromtimestamp(os.stat(filePath).st_ctime)
+   16              _, current_extension = os.path.splitext(filePath)
+   17              folderName = os.path.join(filePath, 'sorted', str(file_ct.year), file_ct.strftime("%B"), current_extension)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_general.py:
+   92  
+   93  # Slicing
+   94: productDescription = ['Top notes', 'Raspberry, Cloudberry', 'Heart notes', 'Cream, Daisy', 'Launch date', '2018']
+   95  productDescription[0::2]
+   96  productDescription[1::2]
+   ..
+  297  pbar = pyprind.ProgBar(totalNumber)
+  298  for i in range(0, totalNumber):
+  299:     pbar.update()
+  300  
+  301  # Use a progress bar in python:
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_lists.py:
+  127  
+  128  # Lowercase all elements in list
+  129: varsToExcludeFromModel = ['SourceInsertDate', 'SourceUpdateDate', 'maxClassRoomAuditDate', 
+  130: 'maxClassRoomPerformanceDate','maxClassRoomStartDate',	'minClassRoomStartDate', 
+  131  'DimOnlineTeacherKey', 'TeacherCenterName' , 	'TeacherAlterkey', 'TeacherCenterParentName', 
+  132: 'TeacherCountry', 'TeacherKey', 'TeacherStatus', 'accessedDate', 'lastActivityDate']
+  133  srcFiles = list(map(lambda x: str.lower(x), varsToExcludeFromModel))
+  134  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_parquet.py:
+  241  dfAdform.registerTempTable("dfAdformSQL")
+  242  sqlQuery ="""SELECT 
+  243: TO_DATE(CAST(UNIX_TIMESTAMP(dfAdformSQL.date, 'dd-MM-yyyy') AS TIMESTAMP)) as date,
+  244  CookieID,
+  245  DeviceTypeID
+  ...
+  247  where CookieID <> 0
+  248  group by 1,2,3
+  249: order by date asc
+  250  """
+  251  dfProfiles = sqlContext.sql(sqlQuery)
+  ...
+  360  trackingPointsPath = os.path.join(baseFolder, currentFile);
+  361  #dfTrackingPoints = pd.read_csv(trackingPointsPath, delimiter='\t', compression='gzip');
+  362: dfTrackingPoints = pd.read_csv(trackingPointsPath, delimiter='\t', compression=None, parse_dates=True);
+  363  
+  364  arrowTable = pa.Table.from_pandas(dfTrackingPoints)
+  ...
+  473  
+  474  
+  475: a = "s3://beamly-data-qubole-prod/data/masterdataset/adform/reporting/dailyProfilesTPSandFD.parquet/date%3D2017-06-14/part-00000-676b06f9-3d03-48c3-bedf-3ac1d5012894.c000.snappy.parquet"
+  476  df = dd.read_parquet(a, storage_options={'anon': True, 'use_ssl': False})
+  477  df.head()
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_regex.py:
+   40  
+   41  # Apply a regex to a DF
+   42: #dfPrices.Price will contain rows such as >> '[{'date': '2017-11-29', 'price': '£26.99'}]'
+   43  price = dfPrices.Price.astype(str).apply(lambda x: re.match(r'\[(.+?)\]', x)[1])
+   44  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_timeDate.py:
+    2  import numpy as np
+    3  import random
+    4: from datetime import datetime, relativedelta
+    5  
+    6  r = random.Random(10)
+    7: def generate_random_date_in_last_yeMar():
+    8:     return datetime.now() - relativedelta(years=0,days=365*random.random())
+    9  
+   10  
+   11  
+   12: # Dates differences:
+   13: from dateutil.relativedelta import relativedelta
+   14: endDT   = dt.datetime.today();
+   15  startDT = endDT - relativedelta(years=1);
+   16  
+   17  
+   18: # Generate date ranges and print them as iso8601
+   19: from dateutil.relativedelta import relativedelta
+   20: t  = datetime.datetime.now()
+   21: ts = pd.date_range(t, freq='W', periods=6)
+   22  ts.tz_localize('UTC')
+   23  for irow in ts:
+   24:   ts_begin = irow.replace(tzinfo=datetime.timezone.utc).isoformat()
+   25:   ts_end   = (irow + relativedelta(hours=2)).replace(tzinfo=datetime.timezone.utc).isoformat()
+   26    print('{')
+   27    print(f'''"begin": "{ts_begin}"''')
+   ..
+   34  
+   35  Produce a timestamp as string (saving files)
+   36: from datetime import datetime
+   37: datetime.now().strftime('%d_%m_%Y')
+   38  
+   39  # Get the month name (as a string)
+   40: import datetime
+   41: datetime.datetime.now().strftime("%B")
+   42  
+   43  
+   44: Convert from standard date format to simple numbers in a dataframe
+   45: 	import matplotlib.dates   as mdates	
+   46: 	df['Date'] = df['Date'].map(mdates.date2num);
+   47  
+   48  
+   ..
+   55  
+   56  
+   57: # Date difference in days
+   58: t2017a = date(2017, 5, 31)
+   59: t2017b = date(2017, 8, 31)
+   60  (t2017b-t2017a).days
+   61  
+   62  
+   63  
+   64: # Dates differences:
+   65: import datetime as dt
+   66: from dateutil.relativedelta import relativedelta
+   67: endDT   = dt.datetime.today();
+   68  startDT = endDT - relativedelta(years=1);
+   69  
+   70  
+   71: # Dates windows:
+   72: import datetime as dt
+   73: from dateutil.relativedelta import relativedelta
+   74: endDT       = dt.datetime.today();
+   75  startDT     = endDT - relativedelta(months=3);
+   76  endDT_str   = endDT.strftime('%Y-%m-%d')
+   ..
+   80  
+   81  # get the following 16 days...
+   82: t2017 = date(2017, 5, 31)
+   83: pd.date_range(t2017, periods=16)
+   84  
+   85  
+   86  # into YYYYMMDDTHH format
+   87: print(dt.datetime.today().strftime('%Y%m%dT%H'))
+   88  
+   89  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_timezones.py:
+   10   
+   11  df = pd.DataFrame(
+   12:     {'start_date': pd.Timestamp('09/02/2018  06:30:00'),
+   13      'country': pd.Categorical(countryList),
+   14:     'local_start_date': expectedTimes,
+   15      'ISOCountry2CharsCode': ISOCountry2CharsCode
+   16      })
+   ..
+   18  
+   19  # Play around with time zones
+   20: # i - start_date must reflect that is 'US/Eastern' time
+   21  
+   22  dw_timezone = pytz.timezone('America/Chicago')
+   23: df['start_local_time'] = df['start_date'].dt.tz_localize(dw_timezone, ambiguous='NaT')
+   24  
+   25  for idx_A, iCountry in enumerate(ISOCountry2CharsCode):
+   ..
+   33  
+   34  # iso8601 (timezone included)
+   35: import datetime
+   36: datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
+   37  
+   38  
+   ..
+   44  
+   45  # Set a string as a timezone and localize it 
+   46: pd.to_datetime('02-09-2019 05:00:00', format='%d-%m-%Y %H:%M:%S').tz_localize('America/New_York')
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_venv.py:
+   57  '''
+   58  
+   59: Replace the two occurrences of _maybe_box_datetimelike 
+   60: with maybe_box_datetimelike in superset/dataframe.py directly in the installed package. 
+   61  It's a workaround of course but apparently it works
+   62  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/sort_files.py:
+    1  import os
+    2: from datetime import datetime
+    3  from shutil import copyfile, move
+    4  
+    .
+   12          if os.path.isfile(filePath) and '.DS_Store' not in filePath and 'sort_files.py' not in filePath:
+   13              files.append(f)
+   14:             file_ct = datetime.fromtimestamp(os.stat(filePath).st_birthtime)
+   15              _, current_extension = os.path.splitext(filePath)
+   16              folderName = os.path.join(thisPath, 'sorted', str(file_ct.year), \
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/sort_files_subfolders.py:
+    1  import os
+    2: from datetime import datetime
+    3  from shutil import copyfile, move
+    4  
+    .
+   11            filePath = os.path.join(root, f)
+   12            if os.path.isfile(filePath) and '.DS_Store' not in filePath and 'sort_files.py' not in filePath:
+   13:               file_ct = datetime.fromtimestamp(os.stat(filePath).st_birthtime)
+   14                _, current_extension = os.path.splitext(filePath)
+   15                folderName = os.path.join(thisPath, 'sorted', str(file_ct.year), \
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/TF2.0-VisualiseTensorboard.ipynb:
+   28     "source": [
+   29      "import tensorflow as tf\n",
+   30:     "import datetime"
+   31     ]
+   32    },
+   ..
+   60       "output_type": "stream",
+   61       "text": [
+   62:       "Train on 60000 samples, validate on 10000 samples\n",
+   63        "Epoch 1/2\n",
+   64        "60000/60000 [==============================] - 6s 107us/sample - loss: 0.2200 - accuracy: 0.9356 - val_loss: 0.1095 - val_accuracy: 0.9658\n",
+   ..
+   84      "              metrics=['accuracy'])\n",
+   85      "\n",
+   86:     "log_dir=\"logs/fit/\" + datetime.datetime.now().strftime(\"%Y%m%d-%H%M%S\")\n",
+   87      "tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)\n",
+   88      "\n",
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/visualisation.py:
+  189  
+  190  # MOre Seaborn options
+  191: sns.lineplot(x="date", y="total_products",
+  192               hue="productBand", markers=True, dashes=False, lw=2.5,
+  193               data=dfBeamlyGRP)
+
+340 matches across 37 files
+
+
+Searching 124 files for "date"
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/aws_kinesis.py:
+   53  event_producer = 'TeachersFirst'
+   54  event_id       = str(uuid.uuid4()) 
+   55: event_time     = datetime.datetime.utcnow().\
+   56: replace(tzinfo=datetime.timezone.utc).isoformat()
+   57  
+   58  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/bunch.py:
+    5  adform = Bunch()
+    6  adform.disable_ingest = False
+    7: adform.start_date = datetime(2018,06,27) # manual backfill before that date
+    8  adform.crawler = None  # 'mip_adform_live'
+    9  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/kaggle_lightGBM.py:
+   12  from sklearn.model_selection import GridSearchCV, cross_val_score, train_test_split, GridSearchCV, RandomizedSearchCV
+   13  from sklearn.metrics import precision_score, recall_score, confusion_matrix,  roc_curve, precision_recall_curve, accuracy_score, roc_auc_score
+   14: from datetime import datetime
+   15  import lightgbm as lgbm
+   16  import warnings
+   ..
+  137      fig.append_trace(trace7,3,1)
+  138      
+  139:     fig['layout'].update(showlegend = False, title = '<b>Model performance report</b><br>'+str(model),
+  140                          autosize = False, height = 1500,width = 830,
+  141                          plot_bgcolor = 'black',
+  142                          paper_bgcolor = 'black',
+  143                          margin = dict(b = 195), font=dict(color='white'))
+  144:     fig["layout"]["xaxis1"].update(color = 'white')
+  145:     fig["layout"]["yaxis1"].update(color = 'white')
+  146:     fig["layout"]["xaxis2"].update((dict(range=[0, 1], color = 'white')))
+  147:     fig["layout"]["yaxis2"].update(color = 'white')
+  148:     fig["layout"]["xaxis3"].update(dict(title = "false positive rate"), color = 'white')
+  149:     fig["layout"]["yaxis3"].update(dict(title = "true positive rate"),color = 'white')
+  150:     fig["layout"]["xaxis4"].update(dict(title = "recall"), range = [0,1.05],color = 'white')
+  151:     fig["layout"]["yaxis4"].update(dict(title = "precision"), range = [0,1.05],color = 'white')
+  152:     fig["layout"]["xaxis5"].update(dict(title = "Percentage contacted"),color = 'white')
+  153:     fig["layout"]["yaxis5"].update(dict(title = "Percentage positive targeted"),color = 'white')
+  154:     fig["layout"]["xaxis6"].update(color = 'white')
+  155:     fig["layout"]["yaxis6"].update(color = 'white')
+  156      for i in fig['layout']['annotations']:
+  157          i['font'] = titlefont=dict(color='white', size = 14)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ml_BayesianOptimisation.py:
+  200  
+  201  
+  202: ## Updates June 2019
+  203  '''
+  204      Quick review of the two main libraries
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ML_SHAP.py:
+  176  Y = df.iloc[0:300][responseVar].values
+  177  
+  178: # validate
+  179  X_val = df.iloc[300:400][inputVars].values
+  180  y_val = df.iloc[300:400][responseVar].values
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ML_training_several_models.py:
+    3  import pandas as pd
+    4  import matplotlib.pyplot as plt
+    5: from datetime import timedelta
+    6  from pandas.tools.plotting import scatter_matrix
+    7  from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/ml_XGBoost.py:
+   33  
+   34  
+   35: params.update({'process_type': 'update',
+   36:                'updater'     : 'refresh',
+   37                 'refresh_leaf': True})
+   38: model_2_v2_update = xgb.train(params, xg_train_2, 30, xgb_model=model_1)
+   39  
+   40  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas.py:
+  160  # A good graphical explanation in http://pbpython.com/images/pivot-table-datasheet.png
+  161  df3 = pd.pivot_table(df, index=["widget_text", "dvce_type",'ue_widget_selection'],
+  162:                      columns = ['date'], values = ['hour'], 
+  163  					 aggfunc='count', fill_value = 0, margins = True)
+  164  
+  ...
+  354  
+  355  
+  356: Add columns in a DF where we want to keep the date index.In this case, 
+  357: we read every 'df' and add it to main_df keeping the dates as an index. The gaps will be filled with Nan
+  358  Replace the Nan's with zeroes
+  359  	df.fillna(0, inplace=True)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_casting.py:
+   51  
+   52  
+   53: # Must be another way without calling datetime...
+   54: from datetime import datetime
+   55: datetime.strptime('02-07-2017', '%d-%m-%Y').date()
+   56  
+   57  # From timestamp to string:
+   ..
+   59  
+   60  # From timestamp to string:
+   61: dateAsStr = dfTest['date'].dt.strftime('%d_%m_%Y');
+   62  
+   63  
+   64: # From string to date:
+   65: pd.to_datetime(thisCookieID_Clicks['Timestamp'], format='%Y-%m-%d %H:%M:%S')
+   66  
+   67  
+   68: #Convert from standard date format to simple numbers in a dataframe
+   69: import matplotlib.dates   as mdates	
+   70: df['Date'] = df['Date'].map(mdates.date2num);
+   71  
+   72  
+   73  
+   74: # Date conversion
+   75: data['date'] = pd.to_datetime(data['date'])
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_dataOps.py:
+  105  from df as A
+  106  inner join (select B.ID,     
+  107:             min(B.StartDate) as minSD,
+  108:             max(B.EndDate)   as maxSD 
+  109              from df as B
+  110              group by 1) as C
+  ...
+  115  # Same with pandas (more on groupby)
+  116  varA      = 'ID';
+  117: dfGrouped = df.groupby(varA, as_index=False).agg({'StartDate': 'min', 'EndDate': 'max'}).copy();
+  118  
+  119  # merge (inner join, left join)
+  120: varsToKeep = ['ID', 'Value', 'Site', 'Value2', 'Random', 'StartDate_grp', 'EndDate_grp'];
+  121  dfTemp = pd.merge(df, dfGrouped, how='inner', on='ID', suffixes=(' ', '_grp'), copy=True)[varsToKeep];
+  122  
+  123: dfBreakDown = dfTemp.groupby(['ID', 'Site', 'Value2', 'Random', 'StartDate_grp',
+  124:        'EndDate_grp']).sum()
+  125  
+  126  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_filtering.py:
+    3  
+    4  
+    5: Select by dates:
+    6: 	minDate    = datetime(2016, 7, 1);
+    7: 	maxDate    = datetime(2016, 9, 1);
+    8: 	rangeDates = pd.date_range(minDate, maxDate);
+    9: 	idxPeriodA = dfTrain['date'].isin(rangeDates);
+   10  	# directly...
+   11: 	dfA = dfTrain[rangeDates]
+   12  
+   13  
+   ..
+   17  
+   18  Strings to Pandas timestamp:
+   19: pd.to_datetime(thisCookieID_Clicks['Timestamp'], format='%Y-%m-%d %H:%M:%S')
+   20  
+   21: # extract the date from a timestamp
+   22: dfSnowplow['date'] = dfSnowplow.dvce_tstamp.apply(lambda x: x.date());
+   23  
+   24  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_indexing.py:
+    4  	"/Users/carlos.aguilar/Documents/Kaggle Competition/Grocery Sales Forecasting/test.csv", usecols=[0, 1, 2, 3, 4],
+    5  	dtype={'onpromotion': bool},
+    6: 	parse_dates=["date"]  # , date_parser=parser
+    7: ).set_index(['store_nbr', 'item_nbr', 'date'])
+    8  # get the index values so we can perform search, etc operations
+    9  storeValues = df_test.index.get_level_values(0)
+   10  itemValues = df_test.index.get_level_values(1)
+   11: dateValues = df_test.index.get_level_values(2)
+   12  # get the data for this particular item
+   13  idxItem = itemValues == 310671;
+   ..
+   71  
+   72  
+   73: # create a DF with the indexes "store_nbr", "item_nbr", "date" and
+   74: # unstack the dates so the columns are the combination "onpromotion", "date"
+   75  promo_2017_train = df_2017.set_index(
+   76:     ["store_nbr", "item_nbr", "date"])[["onpromotion"]].unstack(
+   77          level=-1).fillna(False)
+   78: # Then, remove the "onpromotion" from the columns to just have the "dates"
+   79  promo_2017_train.columns = promo_2017_train.columns.get_level_values(1)
+   80  
+   ..
+   89  del promo_2017_test, promo_2017_train
+   90  
+   91: # Set the date as columns and if the sales are not found, set them to zero
+   92  df_2017 = df_2017.set_index(
+   93:     ["store_nbr", "item_nbr", "date"])[["unit_sales"]].unstack(
+   94          level=-1).fillna(0) 
+   95  df_2017.columns = df_2017.columns.get_level_values(1)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_modin.py:
+   11  '2018-02-09 14:30:00+03:00','2018-02-09 19:30:00+08:00']
+   12  df = pd.DataFrame(
+   13:     {'start_date': pd.Timestamp('09/02/2018  06:30:00'),
+   14      'country': pd.Categorical(countryList),
+   15:     'local_start_date': expectedTimes
+   16      })
+   17  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_readData.py:
+    1  # Read and filter a csv file with PD:
+    2: # Read the csv file and get the valid dates
+    3  dfTrain = pd.read_csv(csvPath,
+    4: 		parse_dates=['date'],
+    5  		low_memory=False, 
+    6  		dtype={'id':np.uint32, 'store_nbr':np.uint8, 'item_nbr': np.uint32,
+    7  		'onpromotion': np.bool, 'unit_sales': np.float32});
+    8  
+    9: idxTrain = dfTrain.date >= minDate;
+   10  dfTrain = dfTrain.ix[idxTrain];
+   11  
+   12  
+   13  Skip rows when reading a dataframe:
+   14: train = pd.read_csv('../input/train.csv', usecols=[1,2,3,4], dtype=dtypes, parse_dates=['date'],
+   15                      skiprows=range(1, 86672217) 
+   16  
+   ..
+   37  'Number of Customer Reviews':np.int64,
+   38  'Number of Customer Reviews - Prior Period':np.int64,
+   39: 'Number of Customer Reviews - Life-to-Date':np.int64,
+   40  'Average Customer Rating':np.float64,
+   41  'Average Customer Rating - Prior Period':np.float64,
+   42: 'Average Customer Rating - Life-to-Date':np.float64,
+   43  '5 Stars':np.int64,
+   44  '4 Stars':np.int64,
+   ..
+   57  	"/Users/carlos.aguilar/Documents/Kaggle Competition/Grocery Sales Forecasting/test.csv", usecols=[0, 1, 2, 3, 4],
+   58  	dtype={'onpromotion': bool},
+   59: 	parse_dates=["date"]  # , date_parser=parser
+   60: ).set_index(['store_nbr', 'item_nbr', 'date'])
+   61  # get the index values so we can perform search, etc operations
+   62  storeValues = df_test.index.get_level_values(0)
+   63  itemValues = df_test.index.get_level_values(1)
+   64: dateValues = df_test.index.get_level_values(2)
+   65  # get the data for this particular item
+   66  idxItem = itemValues == 310671;
+   ..
+   75      converters={'unit_sales': lambda u: np.log1p(
+   76          float(u)) if float(u) > 0 else 0},
+   77:     parse_dates=["date"],
+   78      skiprows=range(1, 66458909))
+   79  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_stats.py:
+   36  maxVals = dfStats.ix['max'];
+   37  
+   38: # stats for dates
+   39: dfStats = dfTrainPeriodA.date.describe();
+   40  minVals = dfStats.ix['first'];
+   41  maxVals = dfStats.ix['last'];
+   42: print('min date {} and max date {}'.format(minVals, maxVals));
+   43  
+   44  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_timeDate.py:
+   16  
+   17  
+   18: #Date differences in Pandas. Get a column with the date of a lagged day:
+   19: df = pd.DataFrame({ 'A' : 1., 'date' : pd.Timestamp('20130102') }, index=[0])
+   20  currentLag = 1;
+   21: df['dayLagged_{}'.format(currentLag)] = df.date - timedelta(days=currentLag);
+   22  
+   23  
+   24  # Get all the weeks since the 2nd of Sept
+   25: valid_from = pd.to_datetime('02-09-2019', format='%d-%m-%Y')
+   26: valid_to = pd.to_datetime(datetime.now())
+   27: idxDates = pd.date_range(valid_from, valid_to, freq='W')
+   28  
+   29  
+   30: # Matlab's datenum
+   31: from datetime import date
+   32: print(date.toordinal(date(1970,1,1)))
+   33: df.date.apply(date.toordinal)
+   34  
+   35  
+   36: # Give it a go with dates
+   37: minDate  = min(dfPurchasesFD.date)
+   38: maxDate  = max(dfPurchasesFD.date)
+   39: idxDates = pd.date_range(minDate, maxDate)
+   40  
+   41: s       = pd.Series({minDate: 0, maxDate: 0})
+   42: s.index = pd.DatetimeIndex(s.index)
+   43: s       = s.reindex(idxDates, fill_value=0).to_frame('sales')
+   44  
+   45  
+   ..
+   47  # Snippet
+   48  import pandas as pd
+   49: from dateutil.relativedelta import relativedelta
+   50: from datetime import date, timedelta
+   51  
+   52  
+   53: df = pd.DataFrame([{'unit_sales' :1, 'date' : pd.Timestamp('20130103'), 'store_nbr' : 2, 'onpromo': True }, 
+   54: 				  {'unit_sales' : 7, 'date' : pd.Timestamp('20130106'), 'store_nbr' : 2, 'onpromo': False }, 
+   55: 				  {'unit_sales' : 2, 'date' : pd.Timestamp('20130102'), 'store_nbr' : 1, 'onpromo': True  }])
+   56  
+   57: varsToKeep = ['unit_sales', 'date', 'store_nbr', 'onpromo'];
+   58: leftKeys   = ['date', 'store_nbr']
+   59  
+   60  for currentLag in range(1,28+1):
+   61  	currentLagVar     = 'dLag_{}'.format(currentLag);
+   62: 	df[currentLagVar] = df.date - timedelta(days=currentLag);
+   63  	varsToKeepRightDF = [x + '_' + currentLagVar for x in ['unit_sales', 'onpromo']]
+   64  	allVarsToKeep     = varsToKeep
+   ..
+   68  	rightKeys = [currentLagVar, 'store_nbr'];
+   69  	dfTemp    = pd.merge(df, df, how='left', left_on=leftKeys, right_on=rightKeys,  suffixes=('', '_' + currentLagVar), copy=True);
+   70: 	# Update the DF
+   71  	df = dfTemp[allVarsToKeep].copy();
+   72  	varsToKeep = allVarsToKeep
+   ..
+   75  
+   76  # get the following 16 days...
+   77: t2017 = date(2017, 5, 31)
+   78: pd.date_range(t2017, periods=16)
+   79  
+   80  
+   81  
+   82  #From timestamp to string:
+   83: dateAsStr = dfTest['date'].dt.strftime('%d_%m_%Y');
+   84  
+   85: # Must be another way without calling datetime...
+   86: from datetime import datetime
+   87: datetime.strptime('02-07-2017', '%d-%m-%Y').date()
+   88  
+   89  #From timestamp to string:
+   ..
+   92  
+   93  
+   94: #From string to date (PANDAS)):
+   95: pd.to_datetime(thisCookieID_Clicks['Timestamp'], format='%Y-%m-%d %H:%M:%S')
+   96  
+   97  
+   98: # a bit more complex. Dates to string in a required format and then unique and to a list:
+   99  idxValid = dfCITemp['retrieveRow'] > 0
+  100: listOfDates = dfCITemp['date'].ix[idxValid].dt.strftime('%Y_%m_%d').unique().tolist()
+  101  
+  102  
+  103  
+  104: # Normal Python from string to date
+  105: datetime.strptime(war_start, '%Y-%m-%d')
+  106  
+  107  
+  108  
+  109  
+  110: minDate  = min(dfPurchasesFD.date)
+  111: maxDate  = max(dfPurchasesFD.date)
+  112: idxDates = pd.date_range(minDate, maxDate)
+  113  
+  114: s       = pd.Series({minDate: 0, maxDate: 0})
+  115: s.index = pd.DatetimeIndex(s.index)
+  116: s       = s.reindex(idxDates, fill_value=0).to_frame('sales')
+  117  
+  118  
+  119: From string to date:
+  120: pd.to_datetime(thisCookieID_Clicks['Timestamp'], format='%Y-%m-%d %H:%M:%S')
+  121  
+  122  
+  123  
+  124: From timestamp to date:
+  125: 	df_activities['date'] = df_activities['startTimestamp'].apply(lambda ts: ts.date())
+  126  
+  127: a bit more complex. Dates to string in a required format and then unique and to a list:
+  128  	idxValid = dfCITemp['retrieveRow'] > 0
+  129: 	listOfDates = dfCITemp['date'].ix[idxValid].dt.strftime('%Y_%m_%d').unique().tolist()
+  130  
+  131  
+  132  # today
+  133: import datetime
+  134: now = datetime.datetime.now()
+  135  
+  136  
+  137  # Go back 6 months from today
+  138: from datetime import date
+  139: from dateutil.relativedelta import relativedelta
+  140: six_months = date.today() - relativedelta(months=6)
+  141  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pandas_toyDatasets.py:
+   31  '2018-02-09 14:30:00+03:00','2018-02-09 19:30:00+08:00']
+   32  df = pd.DataFrame(
+   33:     {'start_date': pd.Timestamp('09/02/2018  06:30:00'),
+   34      'country': pd.Categorical(countryList),
+   35:     'local_start_date': expectedTimes
+   36      })
+   37  
+   ..
+   82  
+   83  dataframe = pd.DataFrame({
+   84:     "date_time": [ generate_random_date_in_last_year() for _ in range(10)],
+   85      "animal": ['zebra','zebra','zebra','zebra','lion','lion','lion','lion','rhino','rhino',],
+   86      "category": ['stripy'] * 4 + ['dangerous'] * 6,
+   ..
+   99  
+  100  Use combinations to create a dataframe:
+  101: skuDateDuple = list(itertools.product(pd.date_range(minDate, maxDate, freq='D'), ['das', 'gaa']))
+  102: df = pd.DataFrame(skuDateDuple, columns=['date', 'productid'])
+  103  df['sales'] = 0
+  104  
+  ...
+  107  
+  108  import pandas as pd
+  109: from dateutil.relativedelta import relativedelta
+  110: from datetime import date, timedelta
+  111  
+  112: df = pd.DataFrame([{'unit_sales' :1, 'date' : pd.Timestamp('20130103'), 'store_nbr' : 2, 'onpromo': True }, 
+  113:                   {'unit_sales' : 7, 'date' : pd.Timestamp('20130106'), 'store_nbr' : 2, 'onpromo': False }, 
+  114:                   {'unit_sales' : 2, 'date' : pd.Timestamp('20130102'), 'store_nbr' : 1, 'onpromo': True  }])
+  115  
+  116  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/pyspark.py:
+   35  parquetDF   = sqlContext.read.parquet(tpParquet)
+   36  
+   37: currentFile = 'tpsUnavailable_' + datetime.now().strftime(dtFormat) + '.pickle';
+   38  pckFile     = os.path.join(outputFolder, currentFile);
+   39  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_aws_s3Utils.py:
+  165      input_catalogue.product_ean.fillna(0, inplace=True)
+  166      input_catalogue.product_ean = input_catalogue.product_ean.astype(int).astype(str)
+  167:     input_catalogue['creation_date'] = pd.to_datetime(input_catalogue['creation_date'])
+  168      # force the integers to float
+  169      int_colnames = input_catalogue.select_dtypes(include=['int']).columns
+  ...
+  176  def read_csv_catalogue(csv_path):
+  177      input_catalogue = pd.read_csv(csv_path, 
+  178:         parse_dates=['creation_date'], 
+  179          delimiter=',', 
+  180:         infer_datetime_format=True
+  181      )
+  182  
+  183      input_catalogue.product_ean.fillna(0, inplace=True)
+  184      input_catalogue.product_ean = input_catalogue.product_ean.astype(int).astype(str)
+  185:     #input_catalogue['creation_date'] = pd.to_datetime(input_catalogue['creation_date'])
+  186      # force the integers to float
+  187      int_colnames = input_catalogue.select_dtypes(include=['int']).columns
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_casting.py:
+    1: Date formats:
+    2: # Must be another way without calling datetime...
+    3: from datetime import datetime
+    4: datetime.strptime('02-07-2017', '%d-%m-%Y').date()
+    5  
+    6  From timestamp to string:
+    .
+    8  
+    9  From timestamp to string:
+   10: 	dateAsStr = dfTest['date'].dt.strftime('%d_%m_%Y');
+   11  
+   12  Produce a timestamp as string (saving files)
+   13: from datetime import datetime
+   14: datetime.now().strftime('%d_%m_%Y')
+   15  
+   16  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_classes.py:
+    4  '''
+    5  
+    6: from datetime import datetime
+    7  import boto3
+    8  import pandas as pd
+    .
+   20      __region_name    = ''
+   21      __s3_staging_dir = ''
+   22:     __createdAt      = datetime.now()
+   23      
+   24      # Public attributes
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_connectivity_DB.py:
+    2  host     =  'localhost'
+    3  port     =  '5432'
+    4: user     =  'candidate'
+    5  password =  '3TqcrjTe0x1ljehu'
+    6  database =  'gocardless'
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_dataclasses.py:
+   98  
+   99  
+  100: # Use field for values that can be updated at a later time, instead of creation time
+  101  @dataclass
+  102  class Booker2:
+  ...
+  143    director: str
+  144    producer: str
+  145:   release_date: datetime
+  146:   created: datetime
+  147:   edited: datetime
+  148    url: str
+  149    characters: List[str]
+  ...
+  153    species: List[str]
+  154    def __post_init__(self):
+  155:     if type(self.release_date) is str:
+  156:     self.release_date = dateutil.parser.parse(self.release_date)
+  157    
+  158      if type(self.created) is str:
+  159:         self.created = dateutil.parser.parse(self.created)
+  160    
+  161      if type(self.edited) is str:
+  162:         self.edited = dateutil.parser.parse(self.edited)
+  163    # same post init by Peter Norvig     
+  164    def __post_init__(self):
+  165:   for attr in [‘release_date’, ‘created’, ‘edited’]:
+  166          if isinstance(getattr(self, attr), str):
+  167:               setattr(self, attr, dateutil.parser.parse(getattr(self, attr)))
+  168  
+  169  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_dataclasses_for_data.py:
+   17  import random, json
+   18  from dataclasses import dataclass, asdict, field
+   19: import datetime as dt
+   20  from typing import List
+   21  import os
+   ..
+   25      data_type: str
+   26      file_location: str
+   27:     creation_time: dt.datetime = dt.datetime.utcnow().\
+   28          replace(tzinfo=dt.timezone.utc).isoformat()
+   29      description: str = 'Not provided'
+   ..
+  105      data_type: str
+  106      file_location: str
+  107:     creation_time: dt.datetime = dt.datetime.utcnow().\
+  108          replace(tzinfo=dt.timezone.utc).isoformat()
+  109      description: str = 'Not provided'
+  ...
+  132    director: str
+  133    producer: str
+  134:   release_date: datetime
+  135:   created: datetime
+  136:   edited: datetime
+  137    url: str
+  138    characters: List[str]
+  ...
+  217  
+  218  
+  219: # Use field for values that can be updated at a later time, instead of creation time
+  220  @dataclass
+  221  class Booker2:
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_dictionaries.py:
+   89      
+   90  
+   91: # Update a dictionary - it will OVERWRITE the field '2'
+   92  d  = {1: "one", 2: "three"}
+   93  d1 = {2: "two"}
+   94: d.update(d1)
+   95  
+   96  # or adding more values
+   97: d.update({'f': 432, 'j': "fgadsg"})
+   98  
+   99  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_filesystem.py:
+   13          if os.path.isfile(filePath):
+   14              files.append(f)
+   15:             file_ct = datetime.fromtimestamp(os.stat(filePath).st_ctime)
+   16              _, current_extension = os.path.splitext(filePath)
+   17              folderName = os.path.join(filePath, 'sorted', str(file_ct.year), file_ct.strftime("%B"), current_extension)
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_general.py:
+   92  
+   93  # Slicing
+   94: productDescription = ['Top notes', 'Raspberry, Cloudberry', 'Heart notes', 'Cream, Daisy', 'Launch date', '2018']
+   95  productDescription[0::2]
+   96  productDescription[1::2]
+   ..
+  297  pbar = pyprind.ProgBar(totalNumber)
+  298  for i in range(0, totalNumber):
+  299:     pbar.update()
+  300  
+  301  # Use a progress bar in python:
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_lists.py:
+  127  
+  128  # Lowercase all elements in list
+  129: varsToExcludeFromModel = ['SourceInsertDate', 'SourceUpdateDate', 'maxClassRoomAuditDate', 
+  130: 'maxClassRoomPerformanceDate','maxClassRoomStartDate',	'minClassRoomStartDate', 
+  131  'DimOnlineTeacherKey', 'TeacherCenterName' , 	'TeacherAlterkey', 'TeacherCenterParentName', 
+  132: 'TeacherCountry', 'TeacherKey', 'TeacherStatus', 'accessedDate', 'lastActivityDate']
+  133  srcFiles = list(map(lambda x: str.lower(x), varsToExcludeFromModel))
+  134  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_parquet.py:
+  241  dfAdform.registerTempTable("dfAdformSQL")
+  242  sqlQuery ="""SELECT 
+  243: TO_DATE(CAST(UNIX_TIMESTAMP(dfAdformSQL.date, 'dd-MM-yyyy') AS TIMESTAMP)) as date,
+  244  CookieID,
+  245  DeviceTypeID
+  ...
+  247  where CookieID <> 0
+  248  group by 1,2,3
+  249: order by date asc
+  250  """
+  251  dfProfiles = sqlContext.sql(sqlQuery)
+  ...
+  360  trackingPointsPath = os.path.join(baseFolder, currentFile);
+  361  #dfTrackingPoints = pd.read_csv(trackingPointsPath, delimiter='\t', compression='gzip');
+  362: dfTrackingPoints = pd.read_csv(trackingPointsPath, delimiter='\t', compression=None, parse_dates=True);
+  363  
+  364  arrowTable = pa.Table.from_pandas(dfTrackingPoints)
+  ...
+  473  
+  474  
+  475: a = "s3://beamly-data-qubole-prod/data/masterdataset/adform/reporting/dailyProfilesTPSandFD.parquet/date%3D2017-06-14/part-00000-676b06f9-3d03-48c3-bedf-3ac1d5012894.c000.snappy.parquet"
+  476  df = dd.read_parquet(a, storage_options={'anon': True, 'use_ssl': False})
+  477  df.head()
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_regex.py:
+   40  
+   41  # Apply a regex to a DF
+   42: #dfPrices.Price will contain rows such as >> '[{'date': '2017-11-29', 'price': '£26.99'}]'
+   43  price = dfPrices.Price.astype(str).apply(lambda x: re.match(r'\[(.+?)\]', x)[1])
+   44  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_timeDate.py:
+    2  import numpy as np
+    3  import random
+    4: from datetime import datetime, relativedelta
+    5  
+    6  r = random.Random(10)
+    7: def generate_random_date_in_last_yeMar():
+    8:     return datetime.now() - relativedelta(years=0,days=365*random.random())
+    9  
+   10  
+   11  
+   12: # Dates differences:
+   13: from dateutil.relativedelta import relativedelta
+   14: endDT   = dt.datetime.today();
+   15  startDT = endDT - relativedelta(years=1);
+   16  
+   17  
+   18: # Generate date ranges and print them as iso8601
+   19: from dateutil.relativedelta import relativedelta
+   20: t  = datetime.datetime.now()
+   21: ts = pd.date_range(t, freq='W', periods=6)
+   22  ts.tz_localize('UTC')
+   23  for irow in ts:
+   24:   ts_begin = irow.replace(tzinfo=datetime.timezone.utc).isoformat()
+   25:   ts_end   = (irow + relativedelta(hours=2)).replace(tzinfo=datetime.timezone.utc).isoformat()
+   26    print('{')
+   27    print(f'''"begin": "{ts_begin}"''')
+   ..
+   34  
+   35  Produce a timestamp as string (saving files)
+   36: from datetime import datetime
+   37: datetime.now().strftime('%d_%m_%Y')
+   38  
+   39  # Get the month name (as a string)
+   40: import datetime
+   41: datetime.datetime.now().strftime("%B")
+   42  
+   43  
+   44: Convert from standard date format to simple numbers in a dataframe
+   45: 	import matplotlib.dates   as mdates	
+   46: 	df['Date'] = df['Date'].map(mdates.date2num);
+   47  
+   48  
+   ..
+   55  
+   56  
+   57: # Date difference in days
+   58: t2017a = date(2017, 5, 31)
+   59: t2017b = date(2017, 8, 31)
+   60  (t2017b-t2017a).days
+   61  
+   62  
+   63  
+   64: # Dates differences:
+   65: import datetime as dt
+   66: from dateutil.relativedelta import relativedelta
+   67: endDT   = dt.datetime.today();
+   68  startDT = endDT - relativedelta(years=1);
+   69  
+   70  
+   71: # Dates windows:
+   72: import datetime as dt
+   73: from dateutil.relativedelta import relativedelta
+   74: endDT       = dt.datetime.today();
+   75  startDT     = endDT - relativedelta(months=3);
+   76  endDT_str   = endDT.strftime('%Y-%m-%d')
+   ..
+   80  
+   81  # get the following 16 days...
+   82: t2017 = date(2017, 5, 31)
+   83: pd.date_range(t2017, periods=16)
+   84  
+   85  
+   86  # into YYYYMMDDTHH format
+   87: print(dt.datetime.today().strftime('%Y%m%dT%H'))
+   88  
+   89  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_timezones.py:
+   10   
+   11  df = pd.DataFrame(
+   12:     {'start_date': pd.Timestamp('09/02/2018  06:30:00'),
+   13      'country': pd.Categorical(countryList),
+   14:     'local_start_date': expectedTimes,
+   15      'ISOCountry2CharsCode': ISOCountry2CharsCode
+   16      })
+   ..
+   18  
+   19  # Play around with time zones
+   20: # i - start_date must reflect that is 'US/Eastern' time
+   21  
+   22  dw_timezone = pytz.timezone('America/Chicago')
+   23: df['start_local_time'] = df['start_date'].dt.tz_localize(dw_timezone, ambiguous='NaT')
+   24  
+   25  for idx_A, iCountry in enumerate(ISOCountry2CharsCode):
+   ..
+   33  
+   34  # iso8601 (timezone included)
+   35: import datetime
+   36: datetime.datetime.utcnow().replace(tzinfo=datetime.timezone.utc).isoformat()
+   37  
+   38  
+   ..
+   44  
+   45  # Set a string as a timezone and localize it 
+   46: pd.to_datetime('02-09-2019 05:00:00', format='%d-%m-%Y %H:%M:%S').tz_localize('America/New_York')
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/python_venv.py:
+   57  '''
+   58  
+   59: Replace the two occurrences of _maybe_box_datetimelike 
+   60: with maybe_box_datetimelike in superset/dataframe.py directly in the installed package. 
+   61  It's a workaround of course but apparently it works
+   62  
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/sort_files.py:
+    1  import os
+    2: from datetime import datetime
+    3  from shutil import copyfile, move
+    4  
+    .
+   12          if os.path.isfile(filePath) and '.DS_Store' not in filePath and 'sort_files.py' not in filePath:
+   13              files.append(f)
+   14:             file_ct = datetime.fromtimestamp(os.stat(filePath).st_birthtime)
+   15              _, current_extension = os.path.splitext(filePath)
+   16              folderName = os.path.join(thisPath, 'sorted', str(file_ct.year), \
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/sort_files_subfolders.py:
+    1  import os
+    2: from datetime import datetime
+    3  from shutil import copyfile, move
+    4  
+    .
+   11            filePath = os.path.join(root, f)
+   12            if os.path.isfile(filePath) and '.DS_Store' not in filePath and 'sort_files.py' not in filePath:
+   13:               file_ct = datetime.fromtimestamp(os.stat(filePath).st_birthtime)
+   14                _, current_extension = os.path.splitext(filePath)
+   15                folderName = os.path.join(thisPath, 'sorted', str(file_ct.year), \
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/TF2.0-VisualiseTensorboard.ipynb:
+   28     "source": [
+   29      "import tensorflow as tf\n",
+   30:     "import datetime"
+   31     ]
+   32    },
+   ..
+   60       "output_type": "stream",
+   61       "text": [
+   62:       "Train on 60000 samples, validate on 10000 samples\n",
+   63        "Epoch 1/2\n",
+   64        "60000/60000 [==============================] - 6s 107us/sample - loss: 0.2200 - accuracy: 0.9356 - val_loss: 0.1095 - val_accuracy: 0.9658\n",
+   ..
+   84      "              metrics=['accuracy'])\n",
+   85      "\n",
+   86:     "log_dir=\"logs/fit/\" + datetime.datetime.now().strftime(\"%Y%m%d-%H%M%S\")\n",
+   87      "tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)\n",
+   88      "\n",
+
+/Users/carlos.aguilar/Google Drive/PythonSnippets/visualisation.py:
+  189  
+  190  # MOre Seaborn options
+  191: sns.lineplot(x="date", y="total_products",
+  192               hue="productBand", markers=True, dashes=False, lw=2.5,
+  193               data=dfBeamlyGRP)
+
+340 matches across 37 files
