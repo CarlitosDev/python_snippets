@@ -26,7 +26,7 @@ print(response)
 
 # Publish a simple message to the specified SNS topic
 response = sns.publish(
-    TopicArn='arn:aws:sns:region:0123456789:my-topic-arn',    
+    TopicArn='arn:aws:sns:region::',    
     Message='Hello World!',    
 )
 

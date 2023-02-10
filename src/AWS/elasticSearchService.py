@@ -16,7 +16,7 @@ awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, \
 
 
 
-endpoint = 'search-ef-lumiere-test-t7elhf63ovmmecdjpz4giwz3ie.eu-west-1.es.amazonaws.com'
+endpoint = ''
 index_name = 'videos_v1'
 #TODO: work what this means??
 document_type = '_doc'

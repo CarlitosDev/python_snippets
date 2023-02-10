@@ -1,7 +1,7 @@
 aws_secrets.py
 
 
-def get_snowflake_credentials(self, secret_name = 'snowflake_credentials_ELBR', aws_region = 'eu-west-1'):
+def get_snowflake_credentials(self, secret_name = '', aws_region = ''):
     ''' 
         Fetch the credentials from AWS Secrets Manager - it requires to run under the appropiate role
     '''

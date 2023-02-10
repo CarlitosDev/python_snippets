@@ -78,7 +78,6 @@ bucketContents = [currentKey['Key'] for currentKey in bucketList['Contents']];
 %spark.pyspark
 import boto3
 import boto3.session
-keys = {'AWS_ACCESS_KEY_ID': 'AKIAJ54WVJLCKE7J44WA', 'AWS_SECRET_ACCESS_KEY': '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'}
 session = boto3.session.Session(region_name='eu-central-1')
 s3client = session.client('s3', config=boto3.session.Config(signature_version='s3v4'),aws_access_key_id=keys['AWS_ACCESS_KEY_ID'], aws_secret_access_key=keys['AWS_SECRET_ACCESS_KEY'])
 bucket_name = "beamly-data-qubole-prod"

@@ -97,7 +97,7 @@ json_data = adu.read_json_from_s3(bucket_contents[1], bucket_name, boto3.resourc
 
 # option 2
 # But if I am on AWS lambda and need to assume the role...
-role_arn_efdev = 'arn:aws:iam::564562162319:role/ef-admin'
+role_arn_efdev = ''
 role_session = adu.session_from_assumed_role(role_arn_efdev, region_name='eu-central-1')
 
 # 2.a
@@ -118,8 +118,8 @@ json_data = adu.read_json_from_s3(bucket_contents[1], bucket_name, s3_resource)
 ### Use the credentials directly.
 import boto3
 session = boto3.Session(
-    aws_access_key_id='AKIAVKXADMHPSL2GA53D',
-    aws_secret_access_key='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',
+    aws_access_key_id='',
+    aws_secret_access_key='',
 		region_name='eu-west-1'
 )
 
