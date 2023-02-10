@@ -1,0 +1,30 @@
+ml_Probatus_analyse_binary_classification_models(ING-bank).py
+
+'''
+Probatus is a Python library that allows to analyse binary classification models as well as the data used to develop them. 
+The main features assess the metric stability and analyse differences between two data samples e.g. shift between train and test splits.
+
+
+pip3 install probatus --user --ignore-installed
+
+
+I seems it requires the last version of llvmlite:
+
+cd ~/Documents/DS_repos/
+git clone https://github.com/numba/llvmlite.git
+cd llvmlite
+python3 setup.py install
+
+
+
+>> I cannot install this thing!
+
+
+
+Anyhow, the main reason for installing it was to try:
+https://ing-bank.github.io/probatus/tutorials/nb_shap_feature_elimination.html
+
+'''
+
+
+

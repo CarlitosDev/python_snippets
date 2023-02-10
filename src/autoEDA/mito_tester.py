@@ -1,0 +1,3 @@
+https://docs.trymito.io/getting-started/installing-mitoMito is a great package for slicing and dicing your data. Mito allows the users to create interactive pivot tables and graphs with just a few clicks.
+Mito pivot tables are a great way to see relationships between different variables and group the data in a way that makes insights more apparent.
+You can configure a Mito pivot table by selecting the Pivot button from the toolbar and then choosing your rows, columns, values and aggregation types.Mito does not just generate the code for pivot tables. In Mito, you can merge datasets, filter, sort, use functions, look at summary statistics, and more — and Mito will generate the equivalent Python for each of these edits.

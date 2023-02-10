@@ -1,0 +1,12 @@
+service: "nlpqa_bentoml_service.py:svc"
+labels:
+  owner: carlos-aguilar
+  project: classroomAI
+include:
+- "*.py"
+python:
+  packages:
+  - transformers
+  - torch
+docker:
+  setup_script: "./download_robertaQA_models.py"

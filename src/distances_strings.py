@@ -76,3 +76,12 @@ get_metrics(str1, str2)
 # this one is a bit mind-blowing
 spellings = ['aguilar', 'agilar', 'aguila', 'aguilarr']
 lev.median(spellings)
+
+
+
+
+
+# Look for partial matches in column names
+get_lev_distance = lambda str_a, str_b: lev.ratio(str_a.lower(), str_b.lower())
+score = df_all_tables_info.var_name.apply(lambda s: get_lev_distance(field_name,s))
+df_all_tables_info[score>0.7].shape

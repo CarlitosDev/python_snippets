@@ -3,7 +3,8 @@ pip3 install ipyparallel
 ipcluster nbextension enable
 
 
-Start it: jupyter notebook 
+Start it: jupyter notebook
+
 jupyter nbconvert --to script 'my-notebook.ipynb'
 
 

@@ -1,6 +1,12 @@
 '''
 Knowledge graph embeddings
-https://docs.ampligraph.org/en/1.2.0/
+https://docs.ampligraph.org/en/1.3.2/
+
+Open source Python library that predicts links between concepts in a knowledge graph.
+
+python3 -c "import ampligraph as pd; print(pd.__version__)"
+
+
 '''
 
 import ampligraph

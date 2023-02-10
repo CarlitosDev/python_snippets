@@ -1,0 +1,12 @@
+install Polynote:
+
+brew install apache-spark
+pip3 install jep jedi pyspark virtualenv
+
+Get Polynote from https://github.com/polynote/polynote/releases
+
+tar -zxvpf polynote-dist.tar.gz
+cd polynote
+./polynote.py
+
+http://localhost:8192

@@ -1,0 +1,18 @@
+install_chromium.txt
+
+
+  STEPS to get Selenium up and running:
+
+  1 - Get Chromium from here https://chromedriver.chromium.org/
+    1.a - Mind that the Chromium version must match the installed Chrome version (*).
+    1.b - Execute this on the Chromium file:
+    cd '/Volumes/GoogleDrive/My Drive/chromedriver/'
+    spctl --add --label 'Approved' chromedriver
+    xattr -d com.apple.quarantine "/Users/carlos.aguilar/Documents/chromedriver/chromedriver"
+  2 - pip3 install Selenium --upgrade
+
+
+(*) Make sure it matches your current Chrome installation.
+For example, check your current version and paste it as
+https://chromedriver.storage.googleapis.com/index.html?path=98.0.4758.80/
+https://chromedriver.storage.googleapis.com/index.html?path=99.0.4844.51/
